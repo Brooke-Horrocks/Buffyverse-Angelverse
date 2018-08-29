@@ -19,3 +19,15 @@ ul {
     font-size: 1.5em;
     text-align: center;
 }
+
+.firstListItem {
+    background-color: black;
+}
+
+.secondListItem {
+    background-color: gray;
+}
+
+.thirdListItem {
+    background-color: white;
+}
