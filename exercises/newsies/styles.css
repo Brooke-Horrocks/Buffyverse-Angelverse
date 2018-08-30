@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5em;
+    text-align: center;
+    border-style: double;
+    border-color: black;
+}
+
+h2 {
+    font-size: 3em;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+}
+
+img {
+    margin: 1.5em;
+    float: left;
+    border-style: solid;
+}
+
+.headlineStory {
+    line-height: 1.5em;
+    margin: 1.5em;
+    font-size: 2em;
+}
+
+.classified {
+    font-size: 1em;
+    text-align: center;
+    border-style: ridge;
+    display: inline-block;
+    min-height: 20vh;
+    min-width: 20vw;
+    margin-right: 15px;
+}
+
+.classifiedContainer {
+    align-content: center;
+    width: 90vw;
+    margin-left: 7%;
+}
