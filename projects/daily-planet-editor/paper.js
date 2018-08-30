@@ -43,7 +43,7 @@ function HowAttractedIsLoisLaneToMe (){
 
 console.log(HowAttractedIsLoisLaneToMe());
 
-var clarkKent =true;
+var clarkKent = true;
 var superman = false;
 
 while(clarkKent) {

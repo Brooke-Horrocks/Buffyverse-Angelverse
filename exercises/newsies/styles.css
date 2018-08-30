@@ -31,7 +31,31 @@ img {
     border-style: solid;
 }
 
-.headlineStory {
+.column1 {
+    display: inline;
+}
+
+.column2 {
+    display: inline;
+}
+
+.column3 {
+    display: inline;
+}
+
+.paragraph1 {
+    line-height: 1.5em;
+    margin: 1.5em;
+    font-size: 2em;
+}
+
+.paragraph2 {
+    line-height: 1.5em;
+    margin: 1.5em;
+    font-size: 2em;
+}
+
+.paragraph3 {
     line-height: 1.5em;
     margin: 1.5em;
     font-size: 2em;
