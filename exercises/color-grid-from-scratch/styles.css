@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 10%;
+}
+
+.container div {
+    margin: 0 auto;
+    border: 3px solid #fff;
+    display: inline-block;
+    min-height: 15vh;
+}
+
+.firstRow {
+    width: 80vw;
+    background-color: #F5C6D6;
+}
+
+.secondRow {
+    width: 20vw;
+    background-color: #EE2E84;
+}
+
+ .thirdRow {
+    width: 40vw;
+    background-color: #85CFD8;
+ }
+
+  #firstBox {
+    width: 60vw;
+    background-color: #8DC63F;
+  }
+
+   #secondBox {
+    width: 20vw;
+    background-color: #E76E34;
+   }
