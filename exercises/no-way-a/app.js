@@ -1,7 +1,6 @@
 function removeA(str) {
     for(var i = 0; i < str.length; i++) {
-        str = str.replace("a", "");
-        str = str.replace("A", "");
+        str = str.replace(/a/gi, "");
     }
     console.log(str);
 }
