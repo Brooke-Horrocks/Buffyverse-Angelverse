@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+#navigationBar {
+    background-color: #333;
+    text-align: center;
+    position: fixed; width: 100%; top: 0%;
+    z-index: 3;
+}
+
+#navigationBar .menuButton {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#navigationBar .menuButton:hover {
+    text-decoration: underline;
+    color: rgb(133, 32, 32);
+}
+
+#navigationBar .verticalDivider {
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid white;
+    height: 10px;
+}
+
+.mainBlogImgContainer {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.mainBlogImg {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.7;
+}
+
+#blogPostSection {
+    padding-top: 20px;
+    padding-bottom: 70px;
+    background-image: url("https://happywall-img-gallery.imgix.net/304/skog_svartvit_display.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+}
+
+#blogPostSection .blogPost {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    transform: translateX(-50%);
+    border: 3px solid black;
+    background-color: rgba(120, 120, 120, .9);
+}
+
+#blogPostSection .blogPostHeader {
+    margin: 10px auto;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#blogPostSection .blogPostImg {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+    shape-outside: ellipse(50%);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#blogPostSection .blogPostDate {
+    font-size: 15px;
+    text-align: right;
+    color: rgb(133, 32, 32);
+    max-width: 60%;
+    text-decoration: overline underline;
+}
+
+#blogPostSection .blogPostContent {
+    margin: 20px auto;
+    font-size: 15px;
+    text-align: justify;
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+#blogPostSection .seeMore {
+    font-size: 15px;
+    text-decoration: underline;
+    color: black;
+}
+
+#blogPostSection .seeMore:hover {
+    text-decoration: underline;
+    color: rgb(133, 32, 32);
+}
+
+footer {
+    position: fixed; width: 10%; bottom: 0%;
+    right: 0;
+    z-index: 3;
+    background-color: #333;
+    text-align: center;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.backToTopButton {
+    font-size: 20px;
+    display: inline-block;
+    margin: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.backToTopButton:hover {
+    text-decoration: underline;
+    color: rgb(133, 32, 32);
+}
