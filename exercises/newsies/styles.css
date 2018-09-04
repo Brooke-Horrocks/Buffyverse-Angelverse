@@ -1,78 +1,123 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+    margin: 0 auto;
+}
+
 html, body {
-    margin: 0;
-    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.newspaperTitle {
+    margin: 0 auto;
+    border: 5px double black;
+    background-color: peru;
+    text-align: center;
+    font-size: 50px;
+}
+
+.articleContainer {
+    align-content: center;
+    text-align: center;
     background-color: antiquewhite;
 }
 
-h1 {
-    margin: 0;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 5em;
-    text-align: center;
-    border-style: double;
-    border-color: black;
+.frontPageArticle {
+    margin-top: 20px;
+    font-size: 30px;
+    display: inline-block;
 }
 
-h2 {
-    font-size: 3em;
-    text-align: center;
-    text-decoration: underline;
+.columns {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
 }
 
-h3 {
-    font-size: 2em;
-    font-style: italic;
+.columnOne {
+    display: inline-block;
+    margin: 5px;
+    width: 30%;
+    font-size: 20px;
+}
+
+.columnTwo {
+    display: inline-block;
+    margin: 5px;
+    width: 30%;
+    font-size: 20px;
+}
+
+.columnThree {
+    display: inline-block;
+    margin: 5px;
+    width: 30%;
+    font-size: 20px;
+}
+
+.classifieds {
+    margin-top: 10%;
+    padding: 1%;
+    border: 5px double;
+}
+
+.classifiedsTitle {
+    font-size: 25px;
+    font-weight: bold;
     text-align: center;
+    border-bottom: 3px solid black;
+}
+
+.classifiedOne {
+    display: inline-block;
+    border-right: 3px solid black;
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.classifiedTwo {
+    display: inline-block;
+    border-right: 3px solid black;
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.classifiedThree {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.classifiedImg {
+    display: inline-block;
+    width: 350px;
+    height: 350px;
 }
 
 img {
-    margin: 1.5em;
-    float: left;
-    border-style: solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 90%;
 }
 
-.column1 {
-    display: inline;
+strong {
+    font-size: 25px;
 }
 
-.column2 {
-    display: inline;
-}
-
-.column3 {
-    display: inline;
-}
-
-.paragraph1 {
-    line-height: 1.5em;
-    margin: 1.5em;
-    font-size: 2em;
-}
-
-.paragraph2 {
-    line-height: 1.5em;
-    margin: 1.5em;
-    font-size: 2em;
-}
-
-.paragraph3 {
-    line-height: 1.5em;
-    margin: 1.5em;
-    font-size: 2em;
-}
-
-.classified {
-    font-size: 1em;
-    text-align: center;
-    border-style: ridge;
-    display: inline-block;
-    min-height: 20vh;
-    min-width: 20vw;
-    margin-right: 15px;
-}
-
-.classifiedContainer {
-    align-content: center;
-    width: 90vw;
-    margin-left: 7%;
+em {
+    text-decoration: underline blue;
+    color: blue;
+    font-style: normal;
+    font-size: 20px;
 }
