@@ -9,7 +9,7 @@ html, body {
 }
 
 #navigationBar {
-    background-color: #333;
+    background-color: rgb(133, 32, 32);
     text-align: center;
     position: fixed; width: 100%; top: 0%;
     z-index: 3;
@@ -26,7 +26,7 @@ html, body {
 
 #navigationBar .menuButton:hover {
     text-decoration: underline;
-    color: rgb(133, 32, 32);
+    color: black;
 }
 
 #navigationBar .verticalDivider {
@@ -69,6 +69,7 @@ html, body {
 }
 
 #blogPostSection .blogPostHeader {
+    padding: 5px;
     margin: 10px auto;
     font-size: 40px;
     font-weight: bold;
@@ -76,6 +77,7 @@ html, body {
 }
 
 #blogPostSection .blogPostImg {
+    padding: 10px;
     width: 40%;
     height: auto;
     border-radius: 50%;
@@ -104,19 +106,19 @@ html, body {
 #blogPostSection .seeMore {
     font-size: 15px;
     text-decoration: underline;
-    color: black;
+    color: rgb(133, 32, 32);
 }
 
 #blogPostSection .seeMore:hover {
     text-decoration: underline;
-    color: rgb(133, 32, 32);
+    color: white;
 }
 
 footer {
     position: fixed; width: 10%; bottom: 0%;
     right: 0;
     z-index: 3;
-    background-color: #333;
+    background-color: rgb(133, 32, 32);
     text-align: center;
     height: 50px;
     margin-top: 50px;
@@ -134,5 +136,5 @@ footer {
 
 .backToTopButton:hover {
     text-decoration: underline;
-    color: rgb(133, 32, 32);
+    color: black;
 }
