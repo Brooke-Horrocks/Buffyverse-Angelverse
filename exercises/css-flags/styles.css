@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 30px;
+    margin-top: 100px;
+}
+
+#france {
+    margin: 0 auto;
+    padding-left: 60px;
+    width: 60vw;
+    height: 60vh;
+}
+
+#france .columnOne {
+    display: inline-block;
+    width: 31%;
+    height: 100%;
+    background-color: blue;
+}
+
+#france .columnTwo {
+    display: inline-block;
+    width: 31%;
+    height: 100%;
+    background-color: white;
+}
+
+#france .columnThree {
+    display: inline-block;
+    width: 31%;
+    height: 100%;
+    background-color: red;
+}
+
+#germany {
+    margin: 0 auto;
+    width: 60vw;
+    height: 60vh;
+}
+
+#germany .rowOne {
+    width: 100%;
+    height: 31%;
+    background-color: black;
+}
+
+#germany .rowTwo {
+    width: 100%;
+    height: 31%;
+    background-color: red;
+}
+
+#germany .rowThree {
+    width: 100%;
+    height: 31%;
+    background-color: yellow;
+}
+
+#madagascar {
+    margin: 0 auto;
+    width: 60vw;
+    height: 60vh;
+}
+
+#madagascar .rowOne {
+    width: 100%;
+    height: 31%;
+    background-color: red;
+}
+
+#madagascar .rowTwo {
+    width: 100%;
+    height: 31%;
+    background-color: green;
+}
+
+#switzerland {
+    margin: 0 auto;
+    width: 60vw;
+    height: 60vh;
+    position: relative;
+}
+
+#switzerland .redBlock {
+    background-color: red;
+    width: 500px;
+    height: 500px;
+}
+
+#switzerland .horizontalBlock {
+    position: relative;
+    transform: translateY(200%);
+    width: 300px;
+    height: 100px;
+    background-color: white;
+}
+
+#switzerland .verticalBlock {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    background-color: white;
+}
+
+#sweden .blueBlock {
+    background-color: blue;
+    width: 60vw;
+    height: 60vh;
+}
+
+#sweden .horizontalBlock {
+    position: relative;
+    transform: translateY(270%);
+    width: 60vw;
+    height: 10vh;
+    background-color: yellow;
+}
+
+#sweden .verticalBlock {
+    position: relative;
+    transform: translate(-200%, -16.7%);
+    width: 5vw;
+    height: 60vh;
+    background-color: yellow;
+}
