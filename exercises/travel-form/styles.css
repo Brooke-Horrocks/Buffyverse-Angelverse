@@ -1,0 +1,105 @@
+:root{
+    --darkShade: #5e7387;
+    --lightShade: #e3e2d9;
+    --text: #2c2429;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    width: 100vw;
+    height: 25vh;
+    background-color: var(--darkShade);
+    color: azure;
+    padding-top: 50px;
+    padding-left: 200px;
+}
+
+form{
+    position: relative;
+    width: 35vw;
+}
+
+label{
+    color: --text;
+}
+
+#name{
+    padding-left: 100px;
+    width: 50vw;
+}
+
+#age{
+    padding-left: 150px;
+    width: 50vw;
+}
+
+#gender{
+    padding-left: 125px;
+    width: 50vw;
+}
+
+.radioOption{
+    margin-right: 5px;
+}
+
+.radioOptionLabel{
+    font-size: .8rem;
+    color: var(--text);
+    padding-left: 15px;
+}
+
+#location{
+    padding-left: 118px;
+    padding-bottom: 15px;
+    width: 50vw;
+}
+
+#destinationSelectBar{
+    padding-left: 15px;
+    width: 150px;
+}
+
+#dietaryRestrictions{
+    padding-left: 40px;
+    width: 50vw;
+}
+
+.checkBoxLabel{
+    padding-left: 10px;
+    font-size: .8rem;
+    color: var(--text);
+}
+
+.checkBoxOption{
+    margin-right: 5px;
+}
+
+#mainBody{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--lightShade);
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+input{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+button{
+    margin-top: 50px;
+    margin-left: 250px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

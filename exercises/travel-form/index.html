@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Travel Form</h1>
+    <div id="mainBody">
+        <form>
+            <div id="name">
+                <label>First Name: </label>
+                <input name="firstName" type="text">
+                <label>Last Name: </label>
+                <input name="lastName" type="text">
+            </div>
+            <div id="age">
+                <label>Age: </label>
+                <input name="age" type="number">
+            </div>
+            <div id="gender">
+                <label>Gender: </label>
+                <label class="radioOptionLabel">Male</label>
+                <input name="gender" class="radioOption" type="radio">
+                <label class="radioOptionLabel">Female</label>
+                <input name="gender" class="radioOption" type="radio">
+                <label class="radioOptionLabel">Other</label>
+                <input name="gender" class="radioOption" type="radio">
+                <label class="radioOptionLabel">Prefer Not to Specify</label>
+                <input name="gender" class="radioOptionLabel" type="radio">
+            </div>
+            <div id="location">
+            <label>Location: </label>
+                <select name="destination" id="destinationSelectBar">
+                    <option value="New York">New York</option>
+                    <option value="California">California</option>
+                    <option value="Florida">Florida</option>
+                </select>
+            </div>   
+            <div id="dietaryRestrictions">
+                <label>Dietary Restrictions:</label>
+                <label class="checkBoxLabel">Vegetarian</label>
+                <input name="dietRestrictions" class="checkBoxOption" type="checkbox">
+                <label class="checkBoxLabel">Kosher</label>
+                <input name="dietRestrictions" class="checkBoxOption" type="checkbox">
+                <label class="checkBoxLabel">Lactose Free</label>
+                <input name="dietRestrictions" class="checkBoxOption" type="checkbox">
+            </div>
+            <button>Submit!</button>
+        </form>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
