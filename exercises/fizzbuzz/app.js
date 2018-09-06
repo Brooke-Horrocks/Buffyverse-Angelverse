@@ -1,29 +1,35 @@
-var fizzBuzzObject = {
-    fizz: " fizz",
-    buzz: " buzz",
-    fizzbuzz: " fizzbuzz",
-    fizzbuzzCount: 0
-}
-
 function fizzBuzz(){
     var numArray = [];
+
     for(var i = 1; i <= 100; i++) {
-        if((i % 3 === 0) && (i % 5 !== 0)) {
-            numArray.push(fizzBuzzObject.fizz);
-        } else if((i % 3 !== 0) && (i % 5 === 0)) {
-            numArray.push(fizzBuzzObject.buzz);
-        } else if ((i % 3 === 0) && (i % 5 === 0)) {
-            numArray.push(fizzBuzzObject.fizzbuzz);
-            fizzBuzzObject.fizzbuzzCount++;
-        } else {
-            numArray.push(` ${i}`);
+        var divBy3 = i % 3 === 0;
+        var divBy5 = i % 5 === 0;
+
+        if((divBy3) && (divBy5)) numArray.push("fizzbuzz");
+        else if(divBy3) numArray.push("fizz");
+        else if (divBy5) numArray.push("buzz");
+        else numArray.push(i);
+    }
+    return numArray;
+}
+
+function countFizzes(arr){
+    var fizzBuzzCounter = {
+        fizz: 0,
+        buzz: 0,
+        fizzbuzz: 0
+    };
+
+    for(var i = 0; i < arr.length; i++){
+        if(fizzBuzzCounter.hasOwnProperty(arr[i])){
+            fizzBuzzCounter[arr[i]]++;
         }
     }
-    return numArray.toString();
+    return fizzBuzzCounter;
 }
 
 console.log();
 console.log(fizzBuzz());
 console.log();
-console.log(`fizzbuzz count: ${fizzBuzzObject.fizzbuzzCount}`);
-console.log();
+const fizzArray = fizzBuzz();
+console.log(countFizzes(fizzArray));
