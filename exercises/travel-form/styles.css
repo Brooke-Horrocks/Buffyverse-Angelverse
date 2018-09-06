@@ -97,9 +97,10 @@ input{
 }
 
 button{
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 250px;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    font-weight: bold;
 }
