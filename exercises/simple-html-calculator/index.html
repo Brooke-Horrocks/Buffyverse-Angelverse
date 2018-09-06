@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple HTML Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div id="calculation">
+            <p id="header">Add</p>
+            <form id="add">
+                <section id="firstInputField">
+                    <label>1st Number:</label>
+                    <input name="numberOneAdd" type="text" placeholder="First Number">
+                </section>
+                <section id="secondInputField">
+                    <label>2nd Number:</label>
+                    <input name="numberTwoAdd" type="text" placeholder="Second Number">
+                </section>
+                <button id="formButton">Submit!</button>
+                <p id="addSolution">Solution: </p>
+            </form>
+        </div>
+        <div id="calculation">
+            <p id="header">Subtract</p>
+            <form id="subtract">
+                <section id="firstInputField">
+                    <label>1st Number:</label>
+                    <input name="numberOneSubtract" type="text" placeholder="First Number">
+                </section>
+                <section id="secondInputField">
+                    <label>2nd Number:</label>
+                    <input name="numberTwoSubtract" type="text" placeholder="Second Number">
+                </section>
+                <button id="formButton">Submit!</button>
+                <p id="subtractSolution">Solution: </p>
+            </form>
+        </div>
+        <div id="calculation">
+            <p id="header">Multiply</p>
+            <form id="multiply">
+                <section id="firstInputField">
+                    <label>1st Number:</label>
+                    <input name="numberOneMultiply" type="text" placeholder="First Number">
+                </section>
+                <section id="secondInputField">
+                    <label>2nd Number:</label>
+                    <input name="numberTwoMultiply" type="text" placeholder="Second Number">
+                </section>
+                <button id="formButton">Submit!</button>   
+                <p id="multiplySolution">Solution: </p>             
+            </form>
+        </div>
+    </div>  
+    
+    <script src="app.js"></script>
+</body>
+</html>
