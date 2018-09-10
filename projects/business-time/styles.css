@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(63, 68, 73);
+}
+
+a{
+    padding: 2vw;
+    text-decoration: none;
+    color: rgb(125, 128, 131);
+    font-weight: bold;
+    font-size: 8px;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: rgb(10, 100, 37);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(Burnell.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 55%;
+}
+
+h1{
+    color: rgb(241, 239, 234);
+    text-align: right;
+    padding-top: 20%;
+    padding-right: 8%;
+}
+
+.scrollDownArrow{
+    display: flex;
+    justify-content: center;
+    color: rgb(241, 239, 234);
+}
+
+section{
+    display: flex;
+    height: 100vh;
+    background-color: bisque;
+}
