@@ -19,8 +19,8 @@
                 <div id="baddieHeader">5 Coins</div>
                 <img id="baddieImg" src="Goomba.png">
                 <div id="goombaCountCostContainer">
-                    <p>Test to see where this is</p>
-                    <p>Here is another test</p>
+                    <p class="totalBaddiesCost" id="numberOfGoombas">Total number of Goombas:</p>
+                    <p class="totalBaddiesCost" id="priceOfGoombas">Total price of Goombas:</p>
                 </div>              
             </div>
             <div class="columnTwo">
@@ -28,8 +28,8 @@
                 <div id="baddieHeader">7 Coins</div>
                 <img id="baddieImg" src="Bob-omb.png">
                 <div id="bobombCountCostContainer">
-                    <p>Test to see where this is</p>
-                    <p>Here is another test</p>
+                    <p class="totalBaddiesCost" id="numberOfBobombs">Total number of Bob-ombs:</p>
+                    <p class="totalBaddiesCost" id="priceOfBobombs">Total price of Bob-ombs:</p>
                 </div> 
             </div>
             <div class="columnThree">
@@ -37,8 +37,8 @@
                 <div id="baddieHeader">11 Coins</div>
                 <img id="baddieImg" src="Cheep cheep.png">
                 <div id="cheepcheepCountCostContainer">
-                    <p>Test to see where this is</p>
-                    <p>Here is another test</p>
+                    <p class="totalBaddiesCost" id="numberOfCheepcheeps">Total number of Cheep-cheeps:</p>
+                    <p class="totalBaddiesCost" id="priceOfCheepcheeps">Total price of Cheep-cheeps:</p>
                 </div> 
             </div>
         </div>
@@ -47,11 +47,12 @@
         <form>
             <h2>Calculate Cost</h2>
             <label>Number of Goombas:</label>
-            <input name="baddieGoomba" type="text">
+            <input name="baddieGoomba" type="text" onfocus="this.value=''" placeholder="Number of Goombas">
             <label>Number of Bob-ombs:</label>
-            <input name="baddieBobomb" type="text">
+            <input name="baddieBobomb" type="text" onfocus="this.value=''" placeholder="Number of Bob-ombs">
             <label>Number of Cheep-cheeps:</label>
-            <input name="baddieCheepcheep" type="text">
+            <input name="baddieCheepcheep" type="text" onfocus="this.value=''" placeholder="Number of Cheep-cheeps">
+            <button>Submit!</button>
             <h3 id="calculatedCost">Total Cost:</h3>
         </form>
     </div>
