@@ -55,6 +55,7 @@ h3 {
 
 label {
     padding-left: 60px;
+    color: var(--text);
 }
 
 button{
@@ -62,6 +63,7 @@ button{
     font-size: 15px;
     font-weight: bold;
     width: 100px;
+    color: var(--text);
 }
 
 #baddieImg {

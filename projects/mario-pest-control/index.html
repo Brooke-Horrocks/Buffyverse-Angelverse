@@ -19,8 +19,8 @@
                 <div id="baddieHeader">5 Coins</div>
                 <img id="baddieImg" src="Goomba.png">
                 <div id="goombaCountCostContainer">
-                    <p class="totalBaddiesCost" id="numberOfGoombas">Total number of Goombas:</p>
-                    <p class="totalBaddiesCost" id="priceOfGoombas">Total price of Goombas:</p>
+                    <p class="totalBaddiesCost">Total number of Goombas: <span id="numberOfGoombas"></span></p> 
+                    <p class="totalBaddiesCost">Total price of Goombas: <span id="priceOfGoombas"></span></p>
                 </div>              
             </div>
             <div class="columnTwo">
@@ -28,8 +28,8 @@
                 <div id="baddieHeader">7 Coins</div>
                 <img id="baddieImg" src="Bob-omb.png">
                 <div id="bobombCountCostContainer">
-                    <p class="totalBaddiesCost" id="numberOfBobombs">Total number of Bob-ombs:</p>
-                    <p class="totalBaddiesCost" id="priceOfBobombs">Total price of Bob-ombs:</p>
+                    <p class="totalBaddiesCost">Total number of Bob-ombs: <span id="numberOfBobombs"></span></p>
+                    <p class="totalBaddiesCost">Total price of Bob-ombs: <span id="priceOfBobombs"></span></p>
                 </div> 
             </div>
             <div class="columnThree">
@@ -37,8 +37,8 @@
                 <div id="baddieHeader">11 Coins</div>
                 <img id="baddieImg" src="Cheep cheep.png">
                 <div id="cheepcheepCountCostContainer">
-                    <p class="totalBaddiesCost" id="numberOfCheepcheeps">Total number of Cheep-cheeps:</p>
-                    <p class="totalBaddiesCost" id="priceOfCheepcheeps">Total price of Cheep-cheeps:</p>
+                    <p class="totalBaddiesCost">Total number of Cheep-cheeps: <span id="numberOfCheepcheeps"></span></p>
+                    <p class="totalBaddiesCost">Total price of Cheep-cheeps: <span id="priceOfCheepcheeps"></span></p>
                 </div> 
             </div>
         </div>
@@ -53,7 +53,7 @@
             <label>Number of Cheep-cheeps:</label>
             <input name="baddieCheepcheep" type="text" onfocus="this.value=''" placeholder="Number of Cheep-cheeps">
             <button>Submit!</button>
-            <h3 id="calculatedCost">Total Cost:</h3>
+            <h3>Total Cost:&nbsp;<span id="calculatedCost"></span></h3>
         </form>
     </div>
     <footer>
