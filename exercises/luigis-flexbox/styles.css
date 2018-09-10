@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: SuperMarioGalaxy;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+}
+
+p{
+    text-align: center;
+    width: 80%;
+}
+
+div{
+    display: flex;
+    background-color: yellow;
+    color: red;
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+    width: 100%;
+    background-color: yellow;
+    position: absolute;
+    height: 10vh;
+    bottom: 0;
+}
+
+
+#luigiHeader{
+    padding: 5%;
+    height: 10%;
+}
+
+#luigiBackground{
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    height: 50%;
+}
+
+#luigiBackground img{
+    height: 100%;
+    width: auto;
+}
+
+#aboutMeSection{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    padding: 2%;
+    background-color: white;
+}
+
+#aboutMeSection h1{
+    margin-bottom: 5%;
+}
+
+#mushroomImg{
+    height: 95%;
+    width: auto;
+}
+
+@media(min-width: 768px){
+    p{
+        width: 50%;
+    }
+
+    #luigiHeader{
+        padding-top: 3%;
+    }
+    
+    #aboutMeSection{
+        height: 30vh;
+    }
+
+    #aboutMeSection h1{
+        margin-bottom: 2%;
+    }
+}
