@@ -29,6 +29,7 @@ var maggie = new Employee("Maggie Wood", "Loan Retention Specialist Supervisor",
 
 console.log();
 
+//Creating instances of Employee
 test.printEmployeeForm();
 noTitle.printEmployeeForm();
 brooke.printEmployeeForm();
@@ -36,6 +37,7 @@ kelsie.printEmployeeForm();
 tennille.printEmployeeForm();
 maggie.printEmployeeForm();
 
+//Adding Employees to Company employeesList array
 sps.addEmployee(test);
 sps.addEmployee(noTitle);
 sps.addEmployee(brooke);
