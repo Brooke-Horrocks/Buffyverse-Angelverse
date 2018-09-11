@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 5vh;
+    background-color: #161616;
+}
+
+a{
+    padding: 2vw;
+    text-decoration: none;
+    color: #6A6F6D;
+    font-weight: bold;
+    font-size: 8px;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #708c98;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../img/Burnell4.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x:60%;
+}
+
+h1{
+    color: #E4E3D6;
+    padding-top: 15%;
+    padding-left: 4%;
+    text-align: left;
+    font-size: 3em;
+}
+
+.scrollDownArrow{
+    display: flex;
+    justify-content: center;
+    color: #E4E3D6;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: #272727;
+    background: linear-gradient(#708c98 33%, #055758);
+}
+
+.aboutMe{
+    width: 100vw;
+}
+
+.aboutMe img{
+    width: 100vw;
+    height: auto;
+    position: sticky;
+    top: 5vh;
+}
+
+.aboutMe h1{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 5%;
+    font-size: 4em;
+}
+
+.aboutMe p{
+    width: 80%;
+    text-align: justify;
+    margin: 0 auto;
+    padding-top: 2%;
+    line-height: 1.5;
+    font-size: 95%;
+    color: #E4E3D6;
+}
+
+.aboutMeImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+}
+
+.aboutMeImg img{
+    width: 85vw;
+    height: 40vh;
+    padding: 2%;
+}
+
+@media(min-width: 768px){
+
+}
