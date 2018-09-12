@@ -48,9 +48,9 @@ header{
 }
 
 h1{
-    color: #E4E3D6;
+    color: #708c98;
     padding-top: 15%;
-    padding-left: 4%;
+    padding-left: 2%;
     text-align: left;
     font-size: 3em;
 }
@@ -86,6 +86,7 @@ section{
     padding-bottom: 5%;
     margin-left: 5%;
     font-size: 4em;
+    color: #E4E3D6;
 }
 
 .aboutMe p{
@@ -130,20 +131,17 @@ section{
     }
     
     .aboutMe img{
-        height: 30vh;
+        height: 20vh;
     }
 
     .aboutMeImg{
         width: 50%;
         height: 95vh;
+        margin-top: 2%;
+        margin-bottom: 2%;
         background-image: url(../img/Burnell6.jpg);
         background-repeat: repeat-x;
         background-position: left bottom;
-    }
-
-    .aboutMeImg img{
-        width: 60%;
-        padding: 0;
     }
 
     footer{
