@@ -65,6 +65,7 @@ h1{
 .scrollDownArrow{
     display: flex;
     justify-content: center;
+    padding-bottom: 3%;
     color: #E4E3D6;
     font-size: 3em;
 }
@@ -89,6 +90,7 @@ section{
 }
 
 .aboutMe h1{
+    font-family: 'Rock Salt', cursive;
     padding-top: 5%;
     padding-bottom: 5%;
     margin-left: 5%;
@@ -133,7 +135,7 @@ footer{
     }
 
     h1{
-        font-size: 7em;
+        font-size: 6em;
     }
 
     section{
