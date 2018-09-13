@@ -150,7 +150,7 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    margin: 10px;
+    margin: .9%;
 }
 
 h3{
@@ -158,9 +158,9 @@ h3{
     text-align: center;
     color: #708c98;
     position: relative;
-    border-top: 2px solid #E4E3D6;
+    border-top: 2px solid rgba(228, 227, 214, .3);
     background-color: #161616;
-    background: linear-gradient(#272727, #161616);
+    background: linear-gradient(#161616, #272727);
 }
 
 span{
@@ -174,7 +174,7 @@ span{
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 33%;
+    width: 100%;
 }
 
 .albumSingle:nth-child(even){
@@ -268,6 +268,9 @@ ul{
     
     .albumsSingles{
         align-items: flex-start;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 1%;
     }
     
     h3{
@@ -277,17 +280,13 @@ ul{
     span{
         font-size: 1.5em;
     }
-    
-    .albumSingle{
-        width: 100%;
-    }
-    
+
     .albumSingle:nth-child(even){
         background-color: #161616;
     }
     
     .albumSingle img{
-        width: 10%;
+        width: 12%;
         height: auto;
         padding: 2vw 2vw;
     }
