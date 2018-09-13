@@ -70,7 +70,7 @@ h1{
     font-size: 3em;
 }
 
-section{
+.aboutMeSection{
     display: flex;
     flex-direction: column;
     background-color: #272727;
@@ -100,12 +100,12 @@ section{
 
 .aboutMe p{
     width: 80%;
-    text-align: justify;
     margin: 0 auto;
     padding-top: 2%;
-    line-height: 1.5;
-    font-size: 95%;
+    line-height: 1.8;
+    font-size: 1.1em;
     color: #E4E3D6;
+    font-family: 'Handlee', cursive;
 }
 
 h2{
@@ -129,6 +129,61 @@ footer{
     bottom: 0;
 }
 
+.musicWrapper{
+    height: 100%;
+    width: 100vw;
+    padding-bottom: 5vh;
+    background-color: #272727;
+}
+
+.musicWrapperHeader{
+    text-align: center;
+    padding-top: 6vh;
+    padding-right: 0;
+}
+
+.albumsSingles{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+h3{
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    color: #708c98;
+    position: relative;
+    border-top: 2px solid #E4E3D6;
+    background-color: #161616;
+    background: linear-gradient(#161616, #272727);
+}
+
+span{
+    width: 50%;
+    padding-left: 5%;
+    color: #E4E3D6;
+    text-align: left;
+}
+
+.albumSingle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 33%;
+}
+
+.albumSingle:nth-child(even){
+    background-color: #161616;
+}
+
+.albumSingle img{
+    width: 25%;
+    height: auto;
+    padding: 2vw 2vw;
+}
+
 @media(min-width: 768px){
     a{
         font-size: 1em;
@@ -138,7 +193,7 @@ footer{
         font-size: 6em;
     }
 
-    section{
+    .aboutMeSection{
         flex-direction: row;
     }
 
@@ -158,9 +213,35 @@ footer{
 
     .aboutMeImg{
         width: 50%;
-        height: 95vh;
+        height: 110vh;
         background-image: url(../img/Burnell6.jpg);
         background-repeat: repeat;
         background-position: left top;
+    }
+    
+    .albumsSingles{
+        align-items: flex-start;
+    }
+    
+    h3{
+        font-size: 2em;
+    }
+    
+    span{
+        font-size: 1.5em;
+    }
+    
+    .albumSingle{
+        width: 100%;
+    }
+    
+    .albumSingle:nth-child(even){
+        background-color: #161616;
+    }
+    
+    .albumSingle img{
+        width: 10%;
+        height: auto;
+        padding: 2vw 2vw;
     }
 }
