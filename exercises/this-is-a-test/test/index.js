@@ -24,3 +24,21 @@ describe("Testing the getLongestString function", function(){
         assert.strictEqual(getLongestString(testCases.three), "")
     })
 })
+
+//describe function showing comparison between two arrays
+describe("assert method demo", function(){
+    it("should return true", function(){
+        assert.deepEqual([1, 2, 3], [1, 2, 3])
+    })
+    it("should return false", function(){
+        assert.strictEqual([1, 2, 3], [1, 2, 3])
+    })
+})
+
+/* two arrays with the same contents are not equal because they are stored in different memory, example:
+[1, 2, 3] === [1, 2, 3] // --> FALSE!!
+
+unless you have the second array point to the same memory, example:
+var numbers = [1, 2, 3];
+var sameNumbers = numbers;
+numbers === sameNumbers // --> TRUE!! */
