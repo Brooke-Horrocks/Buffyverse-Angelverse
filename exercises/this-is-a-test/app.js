@@ -1,6 +1,7 @@
+//function to return longest string in an array
 function getLongestString(arr){
-    var longestString = "";
-    for(var i = 0; i < arr.length; i++){
+    var longestString = arr[0];
+    for(var i = 1; i < arr.length; i++){
         if(arr[i].length > longestString.length) {
             longestString = arr[i];
         }
@@ -8,4 +9,5 @@ function getLongestString(arr){
     return longestString;
 }
 
+//export of getLongestString function
 module.exports = getLongestString;
