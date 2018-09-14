@@ -1,0 +1,62 @@
+{
+    "appetizers": [
+        {
+            "name": "Guac, Salsa and Chips", 
+            "ingredients": ["Tortilla Chips", "Salsa", "Guacamole", "Jalapenos", "Corn", "Red Onions"],
+            "description": "Classic chips, salsa and Guac"
+        },
+        {
+            "name": "Wedge Salad", 
+            "ingredients": ["Bleu Cheese", "Bacon Crumbles", "Onion Straws", "Tomatoes", "Ranch"],
+            "description": "Classic and refreshing wedge salad"
+        }
+    ], 
+    "cold-sandwhiches": [
+        {
+            "name": "Turkey Breast",
+            "ingredients": ["Mayo", "Balsamic Vineger", "Provolone", "Tomato", "Cucumbers", "Red Onion", "Lettuce"], 
+            "description": "Classic turkey breast sandwhich on toasted ciabatta bread"
+        },
+        {
+            "name": "Pastrami", 
+            "ingredients": ["Mayo", "Mustard", "Balsamic Vineger", "Swiss Cheese", "Provolone", "Cheddar Cheese", "Avocado", "Cucumbers", "Tomato", "Bell Peppers", "Onions", "Lettuce"],
+            "description": "The veggie sandwhich with the perfect balance"
+        }
+    ],
+    "hot-sandwhiches": [
+        {
+            "name": "Super Steak Cheesesteak", 
+            "ingredients": ["Onions", "Green Peppers", "Mushrooms", "Provolone", "Lettuce", "Mayo", "Mustard"],
+            "description": "The Cheesesteak of your dreams, made with premium sirloin steak"
+        },
+        {
+            "name": "Chicken Bacon Ranch", 
+            "ingredients": ["Chicken", "Bacon", "Grilled Onions", "Lettuce", "Tomato", "Ranch Dressing"],
+            "description": "Classic Chicken Bacon Ranch"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "Caramel Oat Bar", 
+            "ingredients": ["Caramel", "Chocolate Chips", "Walnuts"],
+            "description": "Our delicious ingredients fill a caramelized brown sugar oat crust"
+        },
+        {
+            "name": "Apple Cobbler Pie", 
+            "ingredients": ["Apples", "Cinnamon", "Brown Sugar", "Cobbler Topping"],
+            "description": "Tart granny smith apples make this apple cobbler the stuff of dreams"
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Mornin' Sunshine", 
+            "ingredients": ["Orange Juice", "Nonfat Vanilla Yogurt", "Strawberry", "Banana"],
+            "description": "Perfect way to start your morning"
+        },
+        {
+            "name": "Mexican Spice Hot Chocolate", 
+            "ingredients": ["Cinnamon", "Nutmeg", "Cardamon", "clove"],
+            "description": "Spiced hot chocolate topped with mini chocolate chips and whipped cream, served with whole mikl"
+        }
+    ]
+}
