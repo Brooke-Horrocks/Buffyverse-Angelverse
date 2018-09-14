@@ -6,7 +6,8 @@ var userName = reader.question("What is your name? ");
 var player = {
     playerName: userName, 
     hp: 10, 
-    inventory: ["map"]
+    inventory: ["map"],
+    hasHealingPotion: false
 };
 
 var enemies = [
@@ -20,31 +21,44 @@ var enemies = [
         hp: 6, 
         itemToDrop: "dagger"
     }, 
-    ogre = {
-        name: "ogre", 
+    gnoll = {
+        name: "gnoll", 
         hp: 8, 
         itemToDrop: "worn gloves"
     }
 ];
 
 var mainOptions = ["walk", "use health potion"];
-var encounterOptions = ["stay and fight", "run"];
 
 function printPlayer(){
-    return `Name: ${player.playerName}.\nHealth: ${player.hp}/10.\nInventory: ${player.inventory}`;
+    return `Name: ${player.playerName}.\nHealth: ${player.hp}/10.\nInventory: ${player.inventory}\n`;
 }
 
 
 while(player.hp !== 0){
-    var index = reader.keyInSelect(mainOptions, "What do you want to do next?");
-    if(selection === 0){
-        //write the walk function and add random enemy functionality
-    } else if(selection === 1){
-        //check if player has a health potion, if so, use it and increase health, otherwise, tell user no health potion
+    var index = reader.keyInSelect(mainOptions, "What do you want to do next? ");
+    if(index === 0){
+        if(Math.random() < .34){
+            console.log(`A ${enemies[Math.floor(Math.random() * 3)].name} appears.`);
+            var selection = reader.keyInYNStrict("Do you stay and fight? ");
+            if(selection){
+                //TODO write combat sequence
+            } else {
+                //TODO write run sequence
+            }
+        } else {
+            console.log("You're safe for now.")
+        }
+    } else if(index === 1){
+        if(player.hasHealingPotion){
+            player.hp += 5;
+            console.log("You have healed five health.\n");
+        } else {
+            console.log("You do not have a health potion to use.\n");
+        }
     } else {
         console.log("You look around aimlessly.");
     }
 }
-
 
 console.log("You died. You can either resurrect with the spirit healer or run back to your body (Hopefully you're a night elf).");
