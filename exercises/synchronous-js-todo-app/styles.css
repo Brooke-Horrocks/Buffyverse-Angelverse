@@ -1,0 +1,82 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: lightcoral;
+}
+
+form{
+    display: flex;
+}
+
+input{
+    margin-right: 15px;
+}
+
+button{
+    font-weight: bold;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+section{
+    border: 3px solid lightcoral;
+    margin-top: 1%;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.todoItemContainer{
+    position: relative;
+    width: 10%;
+    height: 10%;
+    padding: 1%;
+    margin: .5%;
+    background-color: lightblue;
+    border: 3px dashed lightcoral;
+}
+
+.todoItemContainer button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+    background-color: lightblue; 
+}
+
+.todoItemContainer button:hover{
+    color: lightblue;
+    background-color: lightcoral;
+}
+
+h3{
+    margin: 0;
+    margin-bottom: 2%;
+}
+
+p{
+    margin-top: 0;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
