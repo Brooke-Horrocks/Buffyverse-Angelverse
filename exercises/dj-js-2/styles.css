@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    display: flex;
+    width: 30%;
+    height: 92%;
+}
+
+.rowOne{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    width: 80vw;
+    margin: 1%;
+}
+
+.rowTwo{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    width: 80vw;
+    margin: 1%;
+}
+
+.boxOne{
+    background-color: cadetblue;
+}
+
+.boxTwo{
+    background-color: darksalmon;
+}
+
+.boxThree{
+    background-color: orangered;
+}
+
+.rowOne .boxOne:hover{
+    background-color: indigo;
+    border: 5px solid black;
+    border-radius: 5%;
+    box-shadow: 5px 10px 10px darkred;
+    transition-duration: 200ms;
+}
+
+.rowOne .boxTwo:hover{
+    background-color: darkblue;
+    border: 5px dotted black;
+    border-radius: 5%;
+    box-shadow: 5px 10px 10px indigo;
+    transition-duration: 400ms;
+}
+
+.rowOne .boxThree:hover{
+    background-color: darkgreen;
+    border: 5px dashed black;
+    border-radius: 5%;
+    box-shadow: 5px 10px 10px darkblue;
+    transition-duration: 600ms;
+}
+
+.rowTwo .boxOne:hover{
+    background-color: violet;
+    border: 5px dotted black;
+    border-radius: 5%;
+    box-shadow: 5px 10px 10px darkgreen;
+    transition-duration: 800ms;
+}
+
+.rowTwo .boxTwo:hover{
+    background-color: cornflowerblue;
+    border: 5px dashed black;
+    border-radius: 5%;
+    box-shadow: 5px 10px 10px violet;
+    transition-duration: 1000ms
+}
+
+.rowTwo .boxThree:hover{
+    background-color: darkred;
+    border: 5px solid black;
+    border-radius: 5%;
+    box-shadow: 5px 10px 10px cornflowerblue;
+    transition-duration: 1200ms;
+}
