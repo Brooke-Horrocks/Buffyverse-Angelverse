@@ -42,8 +42,10 @@ while(player.hp > 0){
             var playerDamageAmt = Math.ceil(Math.random() * 5);
             var currentEnemy = Object.assign({}, enemies[Math.floor(Math.random() * 3)]);
             var enemyBeginningHealth = currentEnemy.hp;
+
             console.log(`\nA ${currentEnemy.name} appears.`);
             var selection = reader.keyInYNStrict("Do you stay and fight? ");
+            
             if(selection){
                 while(currentEnemy.hp > 0 && player.hp > 0){
                     if(player.hp > 0) {
