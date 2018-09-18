@@ -1,0 +1,132 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.boxOne{
+    border-radius: 5px;
+    background-color: red;
+}
+
+.boxTwo{
+    border-radius: 5px;
+    background-color: blue;
+}
+
+.boxThree{
+    border-radius: 5px;
+    background-color: green;
+}
+
+.boxFour{
+    border-radius: 5px;
+    background-color: purple;
+}
+
+.boxFive{
+    border-radius: 5px;
+    background-color: palegoldenrod;
+}
+
+.containerOne{
+    display: grid;
+    margin: 5% 0;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 5px; 
+}
+
+.containerTwo{
+    display: grid;
+    margin: 5% 0;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 5px; 
+}
+
+.containerTwo .boxFive{
+    background-color: purple;
+}
+
+.containerThree{
+    display: grid;
+    margin: 5% 0;
+    grid-gap: 5px; 
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-auto-rows: 140px;
+}
+
+.containerThree .boxes{
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.boxes:nth-child(even){
+    background-color: red;
+}
+
+.containerFour{
+    display: grid;
+}
+
+@media(min-width: 768px){
+    .containerOne{
+        margin: 3% 1%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 50px);
+    }
+
+    .containerOne .boxOne{
+        grid-column: 1 / 3;
+    }
+    
+    .containerOne .boxTwo{
+        grid-column: 3 / 5;
+    }
+    
+    .containerOne .boxThree{
+        grid-column: 1;
+    }
+    
+    .containerOne .boxFour{
+        grid-column: 2 / 5;
+    }
+    
+    .containerOne .boxFive{
+        grid-column: 1 / 5;
+    }
+
+    .containerTwo{
+        margin: 3% 1%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 50px);
+    }
+    
+    .containerTwo .boxOne{
+        grid-column: 1 / 5;
+    }
+    
+    .containerTwo .boxTwo{
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+    }
+    
+    .containerTwo .boxThree{
+        grid-column: 3 / 5;
+    }
+    
+    .containerTwo .boxFour{
+        grid-column: 3 / 4;
+    }
+    
+    .containerTwo .boxFive{
+        grid-column: 4 / 5;
+    }
+
+    .containerThree{
+        margin: 3% 2%;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+    }
+}
