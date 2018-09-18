@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Shadows Into Light Two', cursive;
+    align-items: center;
+    background-color: #8D7D82;
+}
+
+button{
+    width: 20vw;
+    padding: 40px;
+    font-size: 2em;
+    font-family: 'Shadows Into Light Two', cursive;
+    background-color: #7B7B82;
+    border-radius: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #95B5AD;
+    border: inset;
+}
+
+#clearCountBtn{
+    margin-top: 100px;
+}
+
+#displayedClicks{
+    margin: 100px;
+    font-size: 6em;
+    text-align: center;
+}
