@@ -9,6 +9,59 @@ header{
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    margin-bottom: 2%;
     background-color: #9B8389;
     border-radius: 5px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    margin-bottom: 2%;
+    padding-top: 2%;
+    width: 90%;
+}
+
+button{
+    padding: .5%;
+}
+
+section{
+    margin: 5% 0;
+    padding: 2%;
+    border-top: 2px solid #9B8389;
+}
+
+.todoListImg{
+    visibility: hidden;
+}
+
+@media(min-width: 768px){
+    main{
+        flex-direction: row;
+    }
+
+    form{
+        width: 70%;
+    }
+
+    input{
+        padding-top: 2%;
+        width: 100%;
+    }
+
+    .todoListImg{
+        visibility: visible;
+        width: 30%;
+        background-image: url("./CheckList.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    section{
+        margin: 2% 0;
+    }
 }
