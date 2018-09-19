@@ -7,7 +7,7 @@ body{
 }
 
 button{
-    width: 20vw;
+    width: 30vw;
     padding: 40px;
     font-size: 2em;
     font-family: 'Shadows Into Light Two', cursive;
@@ -22,7 +22,7 @@ button:hover{
 }
 
 #clearCountBtn{
-    margin-top: 100px;
+    margin-top: 15px;
 }
 
 #displayedClicks{
