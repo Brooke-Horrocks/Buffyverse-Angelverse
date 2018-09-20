@@ -1,70 +1,91 @@
-var reader = require("readline-sync");
+const reader = require("readline-sync");
 
 console.log("Welcome to Azeroth!");
 var userName = reader.question("What is your name? ");
 
-var player = {
+const player = {
     playerName: userName, 
-    hp: 10, 
-    inventory: ["map"]
+    hp: 20, 
+    inventory: ["Map"]
 };
 
-var enemies = [
-    murloc = {
-        name: "murloc",
-        hp: 4, 
-        itemToDrop: "minor healing potion"
-    },
-    kobold = {
-        name: "kobold",
-        hp: 6, 
-        itemToDrop: "dagger"
-    }, 
-    gnoll = {
-        name: "gnoll", 
-        hp: 8, 
-        itemToDrop: "pair of worn gloves"
-    }
-];
-
-var mainOptions = ["walk", "use health potion", "print stats"];
-
-function printPlayer(){
-    return `\nName: ${player.playerName}.\nHealth: ${player.hp}/10.\nInventory: ${player.inventory}\n`;
+//Enemy constructor function with default attack power argument
+function Enemy(name, hp, itemToDrop, attackPower = Math.ceil(Math.random() * 5 + 2)){
+    this.name = name;
+    this.hp = hp;
+    this.itemToDrop = itemToDrop;
+    this.attackPower = attackPower;
 }
 
+//function to randomly generate enemy
+function selectMonster(){
+    switch(Math.ceil(Math.random() * 3)){
+        case 1:
+            return new Enemy("Kobold", 4, "Dagger");
+        case 2:
+            return new Enemy("Murloc", 6, "Minor Healing Potion");
+        case 3:
+            return new Enemy("Gnoll", 8, "Robe of Protection");
+    }
+}
 
+//function to print player stats
+function printPlayer(){
+    return `\nName: ${player.playerName}.\nHealth: ${player.hp}/20.\nInventory: ${player.inventory}\n`;
+}
+
+//game loop
 while(player.hp > 0){
-    var index = reader.keyInSelect(mainOptions, "What do you want to do next? ");
+
+    //array of main options
+    const mainOptions = ["walk", "use health potion", "print stats", "remove items from inventory"];
+    const index = reader.keyInSelect(mainOptions, "What do you want to do next? ");
     if(index === 0){
+        
+        //33% chance to generate enemy
         if(Math.random() < .34){
-            var enemyDamageAmt = Math.ceil(Math.random() * 5);
             var playerDamageAmt = Math.ceil(Math.random() * 5);
-            var currentEnemy = Object.assign({}, enemies[Math.floor(Math.random() * 3)]);
-            var enemyBeginningHealth = currentEnemy.hp;
+            if(player.inventory.indexOf("Dagger") !== -1){
+                playerDamageAmt += 2;
+            }
+            
+            //calling function to generate random enemy
+            const currentEnemy = selectMonster();
+            const enemyBeginningHealth = currentEnemy.hp;
 
             console.log(`\nA ${currentEnemy.name} appears.`);
-            var selection = reader.keyInYNStrict("Do you stay and fight? ");
+            const staysToFight = reader.keyInYNStrict("Do you stay and fight? ");
             
-            if(selection){
+            if(staysToFight){
+                
+                //fight encounter loop
                 while(currentEnemy.hp > 0 && player.hp > 0){
                     if(player.hp > 0) {
                         currentEnemy.hp -= playerDamageAmt;
                         console.log(`\nYou attack the ${currentEnemy.name} for ${playerDamageAmt}. It has ${currentEnemy.hp}/${enemyBeginningHealth} health left.`);
                     }
                     if(currentEnemy.hp > 0) {
-                        player.hp -= enemyDamageAmt;
-                        console.log(`The ${currentEnemy.name} attacked you for ${enemyDamageAmt}. You have ${player.hp}/10 health left.\n`);
+                        if(player.inventory.indexOf("Robe of Protection") !== -1){
+                            player.hp -= (currentEnemy.attackPower - 2);
+                            console.log(`The ${currentEnemy.name} attacked you for ${currentEnemy.attackPower - 2}. You have ${player.hp}/20 health left.\n`);
+                        }else{
+                            player.hp -= currentEnemy.attackPower;
+                            console.log(`The ${currentEnemy.name} attacked you for ${currentEnemy.attackPower}. You have ${player.hp}/20 health left.\n`);
+                        }
                     }
                 }
-                if(player.hp > 0){
+                if(player.hp > 0 && (player.inventory.length < 5)){
                     player.inventory.push(currentEnemy.itemToDrop);
                     console.log(`The ${currentEnemy.name} dropped a ${currentEnemy.itemToDrop}. It has been added to your inventory.\n`);
+                } else if(player.hp > 0){
+                    console.log(`The ${currentEnemy.name} dropped a ${currentEnemy.itemToDrop}. Inventory is full, unable to pick up.\n`);
                 }
             } else {
+                
+                //50% chance enemy will hit player once while trying to escape
                 if(Math.random() < .51){
-                    player.hp -= enemyDamageAmt;
-                    console.log(`\nThe ${currentEnemy.name} was able to hit you while you ran. Your health was damaged by ${enemyDamageAmt}. Your health is now ${player.hp}/10.`);
+                    player.hp -= currentEnemy.attackPower;
+                    console.log(`\nThe ${currentEnemy.name} was able to hit you while you ran. Your health was damaged by ${currentEnemy.attackPower}. Your health is now ${player.hp}/20.`);
                 } else {
                     console.log("\nYou escape successfully.");
                 }
@@ -73,16 +94,23 @@ while(player.hp > 0){
             console.log("\nYou're safe for now.")
         }
     } else if(index === 1){
-        if(player.inventory.indexOf("minor healing potion") !== -1){
+        if(player.inventory.indexOf("Minor Healing Potion") !== -1){
             player.hp += 5;
-            player.inventory.splice(player.inventory.indexOf("minor healing potion"), 1);
-            console.log(`\nYou have healed five health. You now have ${player.hp}/10 health.\nNew Inventory: ${player.inventory}.`);
+            player.inventory.splice(player.inventory.indexOf("Minor Healing Potion"), 1);
+            console.log(`\nYou have healed five health. You now have ${player.hp}/20 health.\nNew Inventory: ${player.inventory}.`);
         } else {
             console.log("\nYou do not have a health potion to use.\n");
         }
-    }
-    else if(index === 2){
+    }else if(index === 2){
         console.log(printPlayer());
+    } else if(index === 3) {
+        const itemToRemove = reader.keyInSelect(player.inventory, "\nWhich item would you like to remove? ");
+        if(itemToRemove !== -1){
+            console.log(`The ${player.inventory[itemToRemove]} was removed.`);
+            player.inventory.splice(itemToRemove, 1);
+        } else{
+            console.log("\nNothing was removed.")
+        }
     } else {
         console.log("\nYou look around aimlessly.");
     }
