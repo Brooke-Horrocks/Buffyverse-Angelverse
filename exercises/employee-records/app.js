@@ -7,25 +7,25 @@ Company.prototype.addEmployee = function(employee){
     this.employeesList.push(employee);
 }
 
-function Employee(name, title, salary, status){
-    this.name = name === undefined ? "Name" : name;
-    this.title = title === undefined ? "Title" : title;
-    this.salary = salary === undefined ? 0 : salary;
-    this.status = status === undefined ? "Full-Time" : status;
+function Employee(name = "Name", title = "Title", salary = 0, status = "Full-Time"){
+    this.name = name;
+    this.title = title;
+    this.salary = salary;
+    this.status = status;
 }
 
 Employee.prototype.printEmployeeForm = function(){
     console.log(`Name: ${this.name}, Job Title: ${this.title}, Salary: ${this.salary}, Status: ${this.status}`);
 }
 
-//Checking ternary operation in Constructor
-var sps = new Company();
-var test = new Employee();
-var noTitle = new Employee("Brooke", undefined, 50000, "Full-Time");
-var brooke = new Employee("Brooke Horrocks", "Loan Resolution Specialist", 60000);
-var kelsie = new Employee("Kelsie Kunz", "Loan Retention Specialist", 45000, "Part-Time");
-var tennille = new Employee("Tennille Rodgers", "Loan Retention Specialist", 6000);
-var maggie = new Employee("Maggie Wood", "Loan Retention Specialist Supervisor", 75000);
+//Checking default arguments
+const sps = new Company();
+const test = new Employee();
+const noTitle = new Employee("Brooke", undefined, 50000, "Full-Time");
+const brooke = new Employee("Brooke Horrocks", "Loan Resolution Specialist", 60000);
+const kelsie = new Employee("Kelsie Kunz", "Loan Retention Specialist", 45000, "Part-Time");
+const tennille = new Employee("Tennille Rodgers", "Loan Retention Specialist", 6000);
+const maggie = new Employee("Maggie Wood", "Loan Retention Specialist Supervisor", 75000);
 
 console.log();
 
