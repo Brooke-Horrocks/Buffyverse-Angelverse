@@ -1,7 +1,7 @@
-var {assert} = require("chai");
-var findMissingNo = require("../app");
+const {assert} = require("chai");
+const findMissingNo = require("../app");
 
-testCases = [
+const testCases = [
     [2,1,3,5],
     [12,10, 9],
     [-3,0,-2,3,2,-1],
