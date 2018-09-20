@@ -9,23 +9,28 @@ const player = {
     inventory: ["Map"]
 };
 
-//Enemy constructor function with default attack power argument
-function Enemy(name, hp, itemToDrop, attackPower = Math.ceil(Math.random() * 5 + 2)){
-    this.name = name;
-    this.hp = hp;
-    this.itemToDrop = itemToDrop;
-    this.attackPower = attackPower;
+class Enemy{
+    constructor(name, hp, itemToDrop, dyingSound, attackPower = Math.ceil(Math.random() * 5 + 2)){
+        this.name = name;
+        this.hp = hp;
+        this.itemToDrop = itemToDrop;
+        this.dyingSound = dyingSound;
+        this.attackPower = attackPower;
+    }
+    die(){
+        console.log(this.dyingSound);
+    }
 }
 
 //function to randomly generate enemy
 function selectMonster(){
     switch(Math.ceil(Math.random() * 3)){
         case 1:
-            return new Enemy("Kobold", 4, "Dagger");
+            return new Enemy("Kobold", 4, "Dagger (+2 damage)", "You no take candle!");
         case 2:
-            return new Enemy("Murloc", 6, "Minor Healing Potion");
+            return new Enemy("Murloc", 6, "Minor Healing Potion", "Mrrrglglllggggr");
         case 3:
-            return new Enemy("Gnoll", 8, "Robe of Protection");
+            return new Enemy("Gnoll", 8, "Robe of Protection (+2 armor)", "No hurt!");
     }
 }
 
@@ -38,7 +43,7 @@ function printPlayer(){
 while(player.hp > 0){
 
     //array of main options
-    const mainOptions = ["walk", "use health potion", "print stats", "remove items from inventory"];
+    const mainOptions = ["Walk", "Use health potion", "Print stats", "Remove items from inventory"];
     const index = reader.keyInSelect(mainOptions, "What do you want to do next? ");
     if(index === 0){
         
@@ -76,6 +81,7 @@ while(player.hp > 0){
                 }
                 if(player.hp > 0 && (player.inventory.length < 5)){
                     player.inventory.push(currentEnemy.itemToDrop);
+                    currentEnemy.die();
                     console.log(`The ${currentEnemy.name} dropped a ${currentEnemy.itemToDrop}. It has been added to your inventory.\n`);
                 } else if(player.hp > 0){
                     console.log(`The ${currentEnemy.name} dropped a ${currentEnemy.itemToDrop}. Inventory is full, unable to pick up.\n`);
