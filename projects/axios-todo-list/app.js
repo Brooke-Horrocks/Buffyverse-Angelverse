@@ -36,6 +36,7 @@ form.addEventListener("submit", function(event){
 
     //Post with axios??? Make the post a separate function?
     axios.post(url, todoItem);
+    //figure out then and catch
 
     form.reset();
 })
