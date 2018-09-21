@@ -1,5 +1,5 @@
-var mySquare = document.getElementById("square");
-var myBody = document.getElementById("main");
+const mySquare = document.getElementById("square");
+const myBody = document.getElementById("main");
 
 mySquare.addEventListener('mouseover', function() {
     mySquare.style.backgroundColor = "blue";
