@@ -1,85 +1,86 @@
-var form = document.querySelector("#todoForm");
-var todoListSection = document.querySelector("#todoListSection");
+const form = document.querySelector("#todoForm");
+const todoListSection = document.querySelector("#todoListSection");
+const url = "https://api.vschool.io/[Brooke_Horrocks]/todo/";
+const getRequest = axios.get(url);
 
-var url = "https://api.vschool.io/[Brooke_Horrocks]/todo";
-var getRequest = axios.get(url);
-
-getRequest.then(function(response){
-    var todoObjects = response.data;
-    todoObjects.forEach(function(todoObject){
-        var todoItem = {
-            title: todoObject.title,
-            price: todoObject.price,
-            description: todoObject.description,
-            id: todoObject._id
-        }
-
-        createTodoItem(todoItem);
+getRequest.then(function (response) {
+    const todoObjects = response.data;
+    todoObjects.forEach(function (todoObject) {
+        createTodoItem(todoObject);
     });
 })
-// .catch(function(err){
-//     document.write("Information unavailable");
-//     document.write(err);
-// })
+.catch(function (err) {
+    document.write(err);
+});
 
-form.addEventListener("submit", function(event){
+form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    var todoItem = {
+    const todoItem = {
         title: this.title.value,
         price: this.price.value,
-        description: this.description.value,
+        description: this.description.value
     }
 
-    // Do not display in this function. Only add to database
-    // Using a Post request
-
-    //Post with axios??? Make the post a separate function?
-    axios.post(url, todoItem);
-    //figure out then and catch
+    const postRequest = axios.post(url, todoItem);
+    postRequest.then(function (response) {
+        createTodoItem(response.data);
+    })
+    .catch(function (err) {
+        document.write("Information unavailable");
+    })
 
     form.reset();
-})
+});
 
-function createTodoItem(todoItem){
-
-    var todoItemWrapper = document.createElement("div");
+function createTodoItem(todoItem) {
+    const todoItemWrapper = document.createElement("div");
     todoItemWrapper.className = "todoItemWrapper";
     todoListSection.appendChild(todoItemWrapper);
-    
-    var h3 = document.createElement("h3");
+
+    const h3 = document.createElement("h3");
     h3.innerText = todoItem.title;
 
-    var label = document.createElement("label");
+    const label = document.createElement("label");
     label.className = "todoItemCheckboxLabel";
     label.innerText = "Completed:";
 
-    var checkBox = document.createElement("input");
+    const checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     checkBox.className = "todoItemCheckbox";
-    checkBox.addEventListener("input", function(){
+    checkBox.addEventListener("input", function() {
         label.classList.toggle("completed");
         todoItemWrapper.classList.toggle("completedTask");
     })
 
-    var h4 = document.createElement("h4");
+    const h4 = document.createElement("h4");
     h4.innerText = `Price: $${todoItem.price}`;
 
-    var p = document.createElement("p");
+    const p = document.createElement("p");
     p.innerText = `Description: ${todoItem.description}`;
 
-    var deleteBtn = document.createElement("button");
+    const deleteBtn = document.createElement("button");
     deleteBtn.className = "deleteBtn";
     deleteBtn.innerText = "X";
-    deleteBtn.addEventListener("click", handleDelete());
+    deleteBtn.id = todoItem._id;
+    deleteBtn.addEventListener("click", handleDelete);
 
-    var children = [h3, h4, label, checkBox, p, deleteBtn];
-    children.forEach(function(element){
+    const children = [h3, h4, label, checkBox, p, deleteBtn];
+    children.forEach(function (element) {
         todoItemWrapper.appendChild(element);
     })
 }
 
-function handleDelete(){
+function handleDelete() {
+    this.parentNode.classList.add("deleted");
 
-    //use axios delete request
+    setTimeout(() => {
+        const deleteRequest = axios.delete(url + this.id);
+        deleteRequest.then(response => {
+        todoListSection.removeChild(this.parentNode);
+        })
+        .catch(function (err) {
+            console.log(err);
+        })
+    }, 300);
 }
