@@ -19,7 +19,8 @@ form.addEventListener("submit", function (event) {
     const todoItem = {
         title: this.title.value,
         price: this.price.value,
-        description: this.description.value
+        description: this.description.value,
+        imgUrl: this.imgUrl.value
     }
 
     const postRequest = axios.post(url, todoItem);
@@ -59,13 +60,17 @@ function createTodoItem(todoItem) {
     const p = document.createElement("p");
     p.innerText = `Description: ${todoItem.description}`;
 
+    const imgUrl = document.createElement("div");
+    imgUrl.className = "imgUrl";
+    imgUrl.style.backgroundImage = `url("${todoItem.imgUrl}")`;
+
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "deleteBtn";
     deleteBtn.innerText = "X";
     deleteBtn.id = todoItem._id;
     deleteBtn.addEventListener("click", handleDelete);
 
-    const children = [h3, h4, label, checkBox, p, deleteBtn];
+    const children = [h3, h4, label, checkBox, p, imgUrl, deleteBtn];
     children.forEach(function (element) {
         todoItemWrapper.appendChild(element);
     })

@@ -10,7 +10,7 @@ header{
     justify-content: center;
     width: 100%;
     margin-bottom: 2%;
-    background-color: #9B8389;
+    background-color: #9b8389;
     border-radius: 5px;
 }
 
@@ -66,6 +66,7 @@ section{
 .todoItemWrapper{
     position: relative;
     margin: 2% 0;
+    padding: 1%;
     background-image: linear-gradient(#fff, #9b8389);
     border-top: 10px solid #9B8389;
     border-radius: 5px;
@@ -101,6 +102,16 @@ h4{
 p{
     margin: 0;
     padding: 3%;
+}
+
+.imgUrl{
+    height: 50px;
+    width: 50px;
+    padding: 2%;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .deleteBtn{
