@@ -28,7 +28,7 @@ form.addEventListener("submit", function (event) {
         createTodoItem(response.data);
     })
     .catch(function (err) {
-        document.write("Information unavailable");
+        alert(err);
     })
 
     form.reset();
@@ -55,10 +55,11 @@ function createTodoItem(todoItem) {
     })
 
     const h4 = document.createElement("h4");
-    h4.innerText = `Price: $${todoItem.price}`;
+    h4.innerText = `$${todoItem.price}`;
 
     const p = document.createElement("p");
-    p.innerText = `Description: ${todoItem.description}`;
+    p.innerText = `${todoItem.description}`;
+    p.innerText = todoItem.description;
 
     const imgUrl = document.createElement("div");
     imgUrl.className = "imgUrl";
