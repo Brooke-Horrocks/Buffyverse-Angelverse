@@ -1,0 +1,37 @@
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    margin-bottom: 20px;
+    border: 2px solid black;
+    outline-color: darkgray;
+    width: 80px;
+}
+
+.box-container{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 2px 1px lightgray;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
