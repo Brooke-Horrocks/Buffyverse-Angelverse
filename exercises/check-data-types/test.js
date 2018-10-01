@@ -1,6 +1,5 @@
 const { assert } = require('chai');
-const checkTypes = require('./app').checkTypes;
-const checkTypesAgain = require('./app').checkTypesAgain;
+const { checkTypes, checkTypesAgain } = require('./app');
 
 testCases = [
     [
