@@ -50,25 +50,25 @@ class Boxes extends Component{
 
     bigTime1(){
         this.setState({
-            //set state
+            tLeft: "magenta"
         })
     }
 
     bigTime2(){
         this.setState({
-            //set state
+            tRight: "teal"
         })
     }
 
     bigTime3(){
         this.setState({
-            //set state
+            bLeft: "orange"
         })
     }
 
     bigTime4(){
         this.setState({
-            //set state
+            bRight: "olive"
         })
     }
 
@@ -83,10 +83,10 @@ class Boxes extends Component{
                     <button onClick={this.profesh2}>Profesh</button>
                 </div>
                 <div className="button-container">
-                    <button>Big Time</button>
-                    <button>Big Time</button>
-                    <button>Big Time</button>
-                    <button>Big Time</button>
+                    <button onClick={this.bigTime1}>Big Time</button>
+                    <button onClick={this.bigTime2}>Big Time</button>
+                    <button onClick={this.bigTime3}>Big Time</button>
+                    <button onClick={this.bigTime4}>Big Time</button>
                 </div>
                 <div className="box-container">
                     <div style={{backgroundColor: tLeft}} className="box"></div>
