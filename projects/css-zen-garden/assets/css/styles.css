@@ -1,0 +1,98 @@
+/* Media breakpoint 1132 width*/
+@font-face {
+    font-family: arrow;
+    src: url(../fonts/goofyFont.ttf);
+}
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    color: #325050;
+    background: #fff;
+    font-family: 'Libre Baskerville', serif;
+    background-color: gray;
+    font-size: 90%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/gridlines.png), url(../img/contours.png), url(../img/noise.png), url(../img/huntington.jpg);
+    background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+    background-size: auto, cover, cover, cover;
+    background-position: top left;
+    border-top: 10px solid darkslategrey;
+}
+
+header img{
+    width: 15%;
+    height: auto;
+    opacity: .8;
+}
+
+header h1, h3{
+    text-align: center;
+    margin: 2%;
+}
+
+header h1{
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgba(255,255,255);
+    margin-top: 1%;
+}
+
+header h3{
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+}
+
+header .dottedUnderline{
+    border-bottom: 1px dotted rgba(255,255,255,0.6);
+}
+
+.mainHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    margin-top: 0;
+}
+
+.viewAll{
+    display: flex;
+    justify-content: flex-end;
+    height: 8vh;
+    width: 100vw;
+    background-color: rgba(255,255,255, 0.3);
+}
+
+.viewAll button{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+.allDesign{
+    width: 66.666667%;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: arrow;
+    width: 16.5%;
+    font-size: 55px;
+    color: #fff;
+}
