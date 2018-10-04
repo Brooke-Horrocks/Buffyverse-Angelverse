@@ -32,3 +32,24 @@ h1{
 .links:focus{
     color: darkred;
 }
+
+.service-card-list{
+    display: flex;  
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.service-card{
+    width: 32.5%;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 6px;
+    margin: 0;
+    color: darkcyan;
+}
+
+.service-card:hover{
+    background-color: lightgray;
+    color: darkred;
+}

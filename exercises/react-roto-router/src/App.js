@@ -3,6 +3,7 @@ import { Link, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Services from './Services';
+import MatchService from './MatchService';
 import './styles.css';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home}/>
         <Route path='/about' component={About}/>
-        <Route path='/services' component={Services}/>
+        <Route exact path='/services' component={Services}/>
+        <Route path='/services/:serviceId' component={MatchService}/>
       </Switch>
       <footer>
         ©2018
