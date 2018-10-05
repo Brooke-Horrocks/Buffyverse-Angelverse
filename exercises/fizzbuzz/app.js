@@ -1,9 +1,9 @@
-function fizzBuzz(){
-    var numArray = [];
+const fizzBuzz = () =>{
+    const numArray = [];
 
-    for(var i = 1; i <= 100; i++) {
-        var divBy3 = i % 3 === 0;
-        var divBy5 = i % 5 === 0;
+    for(let i = 1; i <= 100; i++) {
+        let divBy3 = i % 3 === 0;
+        let divBy5 = i % 5 === 0;
 
         if((divBy3) && (divBy5)) numArray.push("fizzbuzz");
         else if(divBy3) numArray.push("fizz");
@@ -13,14 +13,13 @@ function fizzBuzz(){
     return numArray;
 }
 
-function countFizzes(arr){
-    var fizzBuzzCounter = {
+const countFizzes = (arr) => {
+    const fizzBuzzCounter = {
         fizz: 0,
         buzz: 0,
         fizzbuzz: 0
     };
-
-    for(var i = 0; i < arr.length; i++){
+    for(let i = 0; i < arr.length; i++){
         if(fizzBuzzCounter.hasOwnProperty(arr[i])){
             fizzBuzzCounter[arr[i]]++;
         }
