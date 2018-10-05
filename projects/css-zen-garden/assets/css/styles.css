@@ -1,7 +1,7 @@
 /* Media breakpoint 1132 width*/
 @font-face {
     font-family: arrow;
-    src: url(../fonts/goofyFont.ttf);
+    src: url(../fonts/verdemoderna.ttf);
 }
 
 html {
@@ -16,8 +16,7 @@ html {
 body{
     color: #325050;
     background: #fff;
-    font-family: 'Libre Baskerville', serif;
-    background-color: gray;
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 90%;
 }
 
@@ -41,22 +40,26 @@ header img{
 
 header h1, h3{
     text-align: center;
-    margin: 2%;
+    margin: 2%;    
 }
 
 header h1{
-    font-family: 'Julius Sans One', sans-serif;
     color: rgba(255,255,255);
-    margin-top: 1%;
+    margin-top: 1%;    
 }
 
 header h3{
     font-style: italic;
+    font-family: 'Libre Baskerville', serif;    
     color: rgba(255,255,255,0.6);
 }
 
 header .dottedUnderline{
     border-bottom: 1px dotted rgba(255,255,255,0.6);
+}
+
+.container .dottedUnderline{
+    border-bottom: 1px dotted #325050;
 }
 
 .mainHeader{
@@ -77,14 +80,13 @@ header .dottedUnderline{
 }
 
 .viewAll button{
-    color: #fff;
+    color: rgba(255,255,255, 0.6);
     background-color: transparent;
     border: none;
 }
 
 .allDesign{
     width: 66.666667%;
-    font-family: 'Julius Sans One', sans-serif;
 }
 
 .arrow{
@@ -95,4 +97,29 @@ header .dottedUnderline{
     width: 16.5%;
     font-size: 55px;
     color: #fff;
+}
+
+.container{
+    margin: 0 10%;
+}
+
+.container h3{
+    text-align: left;
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.container p{
+    font-family: 'Libre Baskerville', sans-serif; 
+    line-height: 2em;
+    font-size: 90%;
+}
+
+.group{
+    margin: 12% 0;
+}
+
+a{
+    text-decoration: none;
+    color: #0d8ba1;
 }
