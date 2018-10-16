@@ -10,4 +10,4 @@ function CharacterList({ characters }) {
     )
 }
 
-export default CharacterList
+export default CharacterList;
