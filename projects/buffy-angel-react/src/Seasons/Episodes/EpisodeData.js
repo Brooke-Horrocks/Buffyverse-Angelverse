@@ -16,30 +16,30 @@ export default class EpisodeData extends Component {
         }
     }
 
-    getEpisodeData(url) {
+    _getEpisodeData(url) {
         return axios.get(url).then(response => response.data);
     }
-
     _addShow(show) {
-        return episodes => episodes.map(ep => {
-            ep.showName = show;
-            return ep;
+        return episodes => episodes.map(episode => {
+            episode.showName = show;
+            return episode;
         })
     }
-    handleEpisodeData() {
-        return this.getEpisodeData(buffyUrl)
+    _handleEpisodeData() {
+        return this._getEpisodeData(buffyUrl)
             .then(buffyEpisodes => {
-                return this.getEpisodeData(angelUrl)
+                return this._getEpisodeData(angelUrl)
                     .then(angelEpisodes => (
                         [
-                            ...this._addShow("angel")(angelEpisodes),
-                            ...this._addShow("buffy")(buffyEpisodes)
+                            ...this._addShow("buffy")(buffyEpisodes),
+                            ...this._addShow("angel")(angelEpisodes)
                         ]
                     ))
             })
     }
+
     componentDidMount() {
-        this.handleEpisodeData()
+        this._handleEpisodeData()
             .then(episodes => this.setState({
                 episodeLoading: false,
                 episodeErr: null,
@@ -52,6 +52,7 @@ export default class EpisodeData extends Component {
         const props = {
             ...this.state
         }
+        
         return (
             <EpisodeContext.Provider value={props}>
                 {this.props.children}

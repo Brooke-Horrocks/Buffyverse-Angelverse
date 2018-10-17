@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "atom-lib": "^1.1.2",
     "axios": "^0.18.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-html-parser": "^2.0.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
     "yarn": "^1.10.1"

@@ -5,15 +5,21 @@ import { BrowserRouter } from "react-router-dom"
 import App from './App';
 import HeaderData from './Header/HeaderData';
 import ShowData from './Header/ShowData';
-import SeasonData from './Main-View/SeasonData';
+import SeasonData from './Seasons/SeasonData';
+import EpisodeData from './Seasons/Episodes/EpisodeData';
+import CastMemberData from './Main-View/CastMemberData';
 
 render(
     <HeaderData>
         <ShowData>
             <SeasonData>
-                <BrowserRouter>
-                    <App />
-                </BrowserRouter>
+                <EpisodeData>
+                    <CastMemberData>
+                        <BrowserRouter>
+                            <App />
+                        </BrowserRouter>
+                    </CastMemberData>
+                </EpisodeData>
             </SeasonData>
         </ShowData>
     </HeaderData>, 

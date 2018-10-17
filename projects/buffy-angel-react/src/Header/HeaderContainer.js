@@ -1,6 +1,6 @@
 import React from 'react';
-import LeftMenu from './LeftMenu';
 import RightMenu from './RightMenu';
+import LeftMenu from './LeftMenu';
 
 function HeaderContainer() {
     return (

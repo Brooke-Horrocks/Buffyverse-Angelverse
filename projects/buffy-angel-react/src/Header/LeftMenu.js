@@ -1,18 +1,13 @@
 import React from 'react';
-import { withHeaderContext } from './HeaderData'; //Context not working
 
-function LeftMenu({ show, toggleShow }) {
-    return (
-        <div className="left-menu-container">
-            <button onClick={toggleShow}> 
-                {show === "buffy" ?
-                    "Angel"
-                    :
-                    "Buffy"
-                }
-            </button>
+import NavBar from './NavBar';
+
+function LeftMenu(){
+    return(
+        <div className="right-menu-container">
+            <NavBar />
         </div>
     )
 }
 
-export default withHeaderContext(LeftMenu);
+export default LeftMenu;

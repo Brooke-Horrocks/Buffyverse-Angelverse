@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { withHeaderContext } from '../Header/HeaderData';
-import { withShowContext } from '../Header/ShowData';
+import { withHeaderContext } from './Header/HeaderData';
+import { withShowContext } from './Header/ShowData';
 
-import Loading from '../Loading';
-import ErrorHandling from '../ErrorHandling';
+import Loading from './Loading';
+import ErrorHandling from './ErrorHandling';
 import TitleContent from './TitleContent';
 
 function Title({ show, buffyShowData, angelShowData, showloading, showErr }) {

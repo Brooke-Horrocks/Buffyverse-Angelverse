@@ -1,15 +1,29 @@
 import React from 'react'
+import { Route } from "react-router-dom";
 
-import Title from './Title';
+import { withCastMemberContext } from "./CastMemberData"
 
-function Cast() {
+import Title from '../Title';
+import CastList from './CastList';
+import CastMemberDetail from './CastMemberDetail';
+import Loading from '../Loading';
+import ErrorHandling from '../ErrorHandling';
+
+function Cast({ cast, castLoading, castErr }) {
     return (
-        <div>
-            <Title />
-            <div>Side Bar</div>
-            <div>Cast Member Detail Section</div>
-        </div>
+        <Loading loading={castLoading}>
+            <ErrorHandling err={castErr}>
+                <div>
+                    <Title />
+                    <CastList />
+                    <Route path="/cast/cast-member/:name"
+                        render={({ match: { params: { name } } }) => (
+                        <CastMemberDetail {...cast.find(castMember => castMember.person.name === name)}/>
+                    )} />
+                </div>
+            </ErrorHandling>
+        </Loading>
     )
 }
 
-export default Cast;
+export default withCastMemberContext(Cast);

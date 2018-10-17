@@ -7,21 +7,19 @@ import SeasonView from './SeasonView';
 import Loading from '../Loading';
 import ErrorHandling from '../ErrorHandling';
 
-// import EpisodeView from './EpisodeView';
-
-function SeasonsList({ show, seasonLoading, seasonErr, seasons }) { //add episodes
+function SeasonsList({ show, seasonLoading, seasonErr, seasons }) {
     const filterShow = (show) => {
         return seasons => seasons.filter(season => season.showName === show)
     }
     const filteredSeasons = filterShow(show)(seasons);
-    const seasonElements = filteredSeasons.map((season, i) => (
-        <SeasonView key={i} season={season}/>
+    const seasonElements = filteredSeasons.map(season => (
+        <SeasonView key={season.id} season={season}/>
     ))
 
     return (
         <Loading loading={seasonLoading}>
             <ErrorHandling err={seasonErr}>
-                <div>{seasonElements}</div>
+                {seasonElements}
             </ErrorHandling>
         </Loading>
         

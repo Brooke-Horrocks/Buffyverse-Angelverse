@@ -10,32 +10,42 @@ export default class CastMemberData extends Component {
     constructor(){
         super();
         this.state = {
+            castLoading: true,
+            castErr: null,
             cast: []
         }
     }
 
-    getBuffyCastData(url){
-        axios.get(url).then(response => response.data)
-    }    
-    getAngelCastData(url){
-        axios.get(url).then(response => response.data)
-    }    
-    handleBuffyCastData(){
-        this.getBuffyCastData(buffyUrl)
-            .then(cast => this.setState(prevState => ({
-                cast: prevState.cast.concat(cast)
-            })))
+    _getCastData(url){
+        return axios.get(url).then(response => response.data)
     }
-    handleAngelCastData(){
-        this.getAngelCastData(angelUrl)
-            .then(cast => this.setState(prevState => ({
-                cast: prevState.cast.concat(cast)
-            })))
+    _addShow(show){
+        return cast => cast.map(castMember => {
+            castMember.showName = show;
+            return castMember;
+        })
+    }
+    _handleCastData(){
+        return this._getCastData(buffyUrl)
+            .then(buffyCast => {
+                return this._getCastData(angelUrl)
+                    .then(angelCast => (
+                        [
+                            ...this._addShow("buffy")(buffyCast),
+                            ...this._addShow("angel")(angelCast)
+                        ]
+                    ))
+            })
     }
 
     componentDidMount(){
-        this.handleBuffyCastData()
-        this.handleAngelCastData()
+        this._handleCastData()
+            .then(cast => this.setState({
+                castLoading: false,
+                castErr: null, 
+                cast
+            }))
+            //TODO: .catch
     }
 
     render() {

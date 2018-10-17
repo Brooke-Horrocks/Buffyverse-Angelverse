@@ -6,9 +6,11 @@ export default class HeaderData extends Component {
     constructor(){
         super();
         this.state = {
-            show: "buffy"
+            show: "buffy",
+            currentPage: "home"
         }
         this.toggleShow = this.toggleShow.bind(this);
+        this.togglePage = this.togglePage.bind(this);
     }
 
     toggleShow(){
@@ -16,10 +18,16 @@ export default class HeaderData extends Component {
             show: prevState.show === "buffy" ? "angel" : "buffy"
         }))
     }
+    togglePage(page){
+        this.setState({
+            currentPage: page
+        })
+    }
 
     render() {
         const props = {
             toggleShow: this.toggleShow,
+            togglePage: this.togglePage,
             ...this.state
         }
 

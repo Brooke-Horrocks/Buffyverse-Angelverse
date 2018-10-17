@@ -1,15 +1,26 @@
-import React from 'react'
+import React from 'react';
+import HTMLParser from "react-html-parser"
 
-import Title from './Title';
+import { withHeaderContext } from "../Header/HeaderData";
+import { withShowContext } from "../Header/ShowData";
 
-function Home() {
+import Title from '../Title';
+import ErrorHandling from '../ErrorHandling';
+import Loading from '../Loading';
+
+function Home({ show, buffyShowData, angelShowData, showLoading, showErr }) {
     return (
-        <div>
-            <Title />
-            <div>Background Picture</div>
-            <div>Show Description</div>
-        </div>
+        <Loading loading={showLoading}>
+            <ErrorHandling err={showErr}>
+                <Title />
+                {show === 'buffy' ?
+                    <div className="show-summary">{HTMLParser(buffyShowData.summary)}</div>
+                    :
+                    <div className="show-summary">{HTMLParser(angelShowData.summary)}</div>
+                }
+            </ErrorHandling>
+        </Loading>
     )
 }
 
-export default Home;
+export default withHeaderContext(withShowContext(Home));

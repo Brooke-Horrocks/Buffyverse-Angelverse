@@ -16,16 +16,16 @@ export default class SeasonData extends Component {
         }
     }
 
-    _getSeasonData(url){
+    _getSeasonData(url) {
         return axios.get(url).then(response => response.data)
     }
-    _addShow(show){
+    _addShow(show) {
         return seasons => seasons.map(season => {
             season.showName = show;
             return season;
         })   
     }
-    _handleSeasonData(){
+    _handleSeasonData() {
         return this._getSeasonData(buffyUrl)
             .then(buffySeasons => {
                 return this._getSeasonData(angelUrl)
