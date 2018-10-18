@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { withHeaderContext } from '../Header/HeaderData';
+import { withHeaderContext } from '../../Header/HeaderData';
 import { withCastMemberContext } from './CastMemberData';
 
-import Loading from '../Loading';
-import ErrorHandling from '../ErrorHandling';
+import Loading from '../../Loading';
+import ErrorHandling from '../../ErrorHandling';
 import CastMemberView from './CastMemberView';
 
 function CastList({ show, castLoading, castErr, cast }) {

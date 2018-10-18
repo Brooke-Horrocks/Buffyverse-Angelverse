@@ -10,7 +10,7 @@ function SeasonView({ season, on, toggle }) {
     return (
         <div>
             <div onClick={toggle} className="season-button">Season {season.number}</div>
-            <div className={on ? "" : "hidden"}>
+            <div className={on ? "visible" : "hidden"}>
                 <Provider value={{toggle}}>
                     <div>{HTMLParser(season.summary)}</div>
                     <EpisodeList season={season} />

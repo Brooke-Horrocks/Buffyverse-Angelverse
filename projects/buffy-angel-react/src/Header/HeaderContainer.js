@@ -4,8 +4,8 @@ import { withHeaderContext } from '../Header/HeaderData';
 import RightMenu from './RightMenu';
 import LeftMenu from './LeftMenu';
 
-import buffyBackground from '../assets/img/buffyBackground.png'
 import angelBackground from '../assets/img/angelBackground.png'
+import buffyBackground from '../assets/img/buffyBackground.png';
 
 function HeaderContainer({ show }) {
     const whichBackground = () => {

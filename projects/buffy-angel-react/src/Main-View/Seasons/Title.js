@@ -5,7 +5,7 @@ import { withShowContext } from './Header/ShowData';
 
 import Loading from './Loading';
 import ErrorHandling from './ErrorHandling';
-import TitleContent from './TitleContent';
+import TitleContent from '../TitleContenteContent';
 
 function Title({ show, buffyShowData, angelShowData, showloading, showErr }) {
     return(

@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { withSeasonContext } from './SeasonData';
-import { withHeaderContext } from '../Header/HeaderData';
+import { withHeaderContext } from '../../Header/HeaderData'
 
 import SeasonView from './SeasonView';
-import Loading from '../Loading';
-import ErrorHandling from '../ErrorHandling';
+import Loading from '../../Loading';
+import ErrorHandling from '../../ErrorHandling';
 
 function SeasonsList({ show, seasonLoading, seasonErr, seasons }) {
     const filterShow = (show) => {

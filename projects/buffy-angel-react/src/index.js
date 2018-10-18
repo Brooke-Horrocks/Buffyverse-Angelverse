@@ -5,9 +5,9 @@ import { BrowserRouter } from "react-router-dom"
 import App from './App';
 import HeaderData from './Header/HeaderData';
 import ShowData from './Header/ShowData';
-import SeasonData from './Seasons/SeasonData';
-import EpisodeData from './Seasons/Episodes/EpisodeData';
-import CastMemberData from './Main-View/CastMemberData';
+import SeasonData from './Main-View/Seasons/SeasonData';
+import EpisodeData from './Main-View/Seasons/Episodes/EpisodeData';
+import CastMemberData from './Main-View/Cast/CastMemberData';
 
 render(
     <HeaderData>

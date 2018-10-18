@@ -4,7 +4,7 @@ import HTMLParser from "react-html-parser"
 import { withHeaderContext } from "../Header/HeaderData";
 import { withShowContext } from "../Header/ShowData";
 
-import Title from '../Title';
+import Title from './Title';
 import ErrorHandling from '../ErrorHandling';
 import Loading from '../Loading';
 

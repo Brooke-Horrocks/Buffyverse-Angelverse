@@ -12,9 +12,11 @@ function EpisodeView({ episode, history }) {
     return (
         <Consumer>
             {({ toggle }) => (
-                <button onClick={handleRouting(history, `/seasons/episode/${episode.id}`)(toggle)}>
-                    <div>Episode {episode.number} - {episode.name}</div>
-                </button>
+                <div className="episode-buttons-container">
+                    <button className="episode-buttons" onClick={handleRouting(history, `/seasons/episode/${episode.id}`)(toggle)}>
+                        <div>Episode {episode.number} - {episode.name}</div>
+                    </button>
+                </div>
             )}
         </Consumer>
     )

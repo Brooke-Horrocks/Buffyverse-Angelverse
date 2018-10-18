@@ -6,8 +6,8 @@ import { withCastMemberContext } from "./CastMemberData"
 import Title from '../Title';
 import CastList from './CastList';
 import CastMemberDetail from './CastMemberDetail';
-import Loading from '../Loading';
-import ErrorHandling from '../ErrorHandling';
+import Loading from '../../Loading';
+import ErrorHandling from '../../ErrorHandling';
 
 function Cast({ cast, castLoading, castErr }) {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withHeaderContext } from './Header/HeaderData';
+import { withHeaderContext } from '../Header/HeaderData';
 
 function TitleContent({show, buffy, angel}) {
     const whichFont = () => {
