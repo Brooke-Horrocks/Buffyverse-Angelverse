@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 
 function LeftMenu(){
     return(
-        <div className="right-menu-container">
+        <div className="left-menu-container">
             <NavBar />
         </div>
     )

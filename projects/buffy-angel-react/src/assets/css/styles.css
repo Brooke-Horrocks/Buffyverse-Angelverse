@@ -7,13 +7,7 @@
 body{
     margin: 0;
     color: black;
-    background-color: rgb(203, 186, 182);
-    /* background-color: white; */
-    /* background-image: url("../img/darkBuffy2.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position-x: 100%; */
+    
 }
 
 @font-face {
@@ -31,14 +25,40 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 20vw;
+    height: 25vh;
     width: 100%;
     position: fixed;
     top: 0;
-    background-image: url("../img/buffyBackground.png");
+    background-color: green;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-attachment: fixed;
+    background-position-x: 92%;
+    background-position-y: -18%;
+    /* background-image: url("../img/buffyBackground.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 40%;
+    background-position-y: 40%; */
+}
+
+.left-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    transform: translateY(260%);
+    width: 50vw;
+    background-color: darkred;
+}
+
+.right-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    transform: translateY(260%);
+    width: 50vw;
+    background-color: darkred;
 }
 
 .toggle-button{
@@ -55,28 +75,36 @@ a{
     margin: 5px;
     text-decoration: none;
     font-size: 1.1em;
-    color: darkred;
+    color: white;
 }
 
 .main-view-container{
     display: flex;
     flex-direction: column;
-    padding: 4%;
-    height: 100vh;
-    color: white;
+    padding: 5%;
+    padding-top: 32vh;
+    padding-bottom: 10vh;
+    background-color: white;
+    color: black;
 }
 
 .title{
     display: flex;
-    justify-content: center;
-    font-size: 2.9em;
-    height: 10%;
-    /* color: darkred; */
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5em;
+    height: 15%;
+    width: 80vw;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    margin: 12%;
+    color: white;
 }
 
 .show-summary{
     font-size: 1.5em;
-    color: rgb(245, 240, 225);
 }
 
 .hidden{
@@ -100,13 +128,23 @@ a{
 }
 
 .cast-member-person{
-    width: 50%;
+    width: 48%;
     text-align: right;
-    color: white;
+    color: darkred;
 }
 
 .cast-member-character{
-    width: 45%;
+    width: 48%;
     text-align: left;
     color: black;
+}
+
+.cast-member-img-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cast-member-image{
+    height: 48%;
+    width: 48%;
 }

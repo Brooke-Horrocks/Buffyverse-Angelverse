@@ -27,7 +27,7 @@ function RightMenu({ show, currentPage, toggleShow, history }) {
     }
 
     return (
-        <div style={whichFont()} className="left-menu-container">
+        <div style={whichFont()} className="right-menu-container">
             <button className="toggle-button" onClick={handleOnClick}> 
                 {show === "buffy" ?
                     "ANGEL"
