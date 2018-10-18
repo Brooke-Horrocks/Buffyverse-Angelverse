@@ -123,7 +123,6 @@ h4{
 
 .show-summary{
     font-size: 1.2em;
-    /* border-left: 5px solid black; */
     padding: 10px;
 }
 
@@ -132,6 +131,11 @@ h4{
     padding: 2%;
     margin-bottom: 10px;
     cursor: pointer;
+    transition: all .6s ease;
+}
+
+.season-button:active{
+    border: 3px inset darkred;
 }
 
 .hidden{
@@ -174,7 +178,6 @@ h4{
 .episode-buttons:hover{
     color: darkred;
     width: 100%;
-    border-top: 2px solid darkred;
     transition: all .5s ease-in-out;
 }
 
@@ -306,7 +309,13 @@ h4{
         left: 85.5vw;
         transform: translateY(0);
         background: #000;
-        font-size: 1.3em;
+    }
+
+    .right-menu-container button{
+        font-size: 2.2em;
+        border-right: 2px solid white;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
     }
 
     .left-menu-container a {
