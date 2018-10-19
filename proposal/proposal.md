@@ -15,7 +15,7 @@ A Comics page that will display information for all the related Buffy and Angel 
 * *Home Page*
   * Headers, descriptions, images, etc. will change depending on the toggle
   ![Image of Buffy Home Page](./wireframe/1-Buffy-Home-Pg.png)
-  ![Image of Angel Home Page](./wireframe/1-Angel-Home-Pg.png)
+  ![Image of Angel Home Page](./wireframe/2-Angel-Home-Pg.png)
 
 * *Seasons/Episodes Page*
   * Each season will be a drop down
@@ -24,7 +24,7 @@ A Comics page that will display information for all the related Buffy and Angel 
   * Headers, descriptions, images, etc. will change depending on the toggle
   ![Image of Main Seasons/Episodes Page](./wireframe/3-Buffy-Seasons-Pg.png)
   ![Image of Seasons/Episodes Page with Dropdown](./wireframe/4-Buffy-Seasons-Pg-w-Drop-Down.png)
-  ![Image of Seasons/Episodes Page with Episode Description](./wireframe/5-Buffy-Seasons-Pg-w-Ep-Description.png)
+  ![Image of Seasons/Episodes Page with Episode Description](./wireframe/5-Buffy-Seasons-Pg-w-Ep-Desc.png)
 
 * *Cast Page*
   * Once a cast member is clicked on, a section on the right will show details for that specific cast member
