@@ -14,31 +14,23 @@ A Comics page that will display information for all the related Buffy and Angel 
 ## Wireframe
 * *Home Page*
   * Headers, descriptions, images, etc. will change depending on the toggle
-  ![Image of Buffy Home Page]
-  (./wireframe/1-Buffy-Home-Pg.png)
-  ![Image of Angel Home Page]
-  (./wireframe/1-Angel-Home-Pg.png)
+  ![Image of Buffy Home Page](./wireframe/1-Buffy-Home-Pg.png)
+  ![Image of Angel Home Page](./wireframe/1-Angel-Home-Pg.png)
 
 * *Seasons/Episodes Page*
   * Each season will be a drop down
   * Once the season is clicked on, it will expand to show an episode list
   * Once an episode is clicked on in the list, a section on the right will show details for the specific episode
   * Headers, descriptions, images, etc. will change depending on the toggle
-  ![Image of Main Seasons/Episodes Page]
-  (./wireframe/3-Buffy-Seasons-Pg.png)
-  ![Image of Seasons/Episodes Page with Dropdown]
-  (./wireframe/4-Buffy-Seasons-Pg-w-Drop-Down.png)
-  ![Image of Seasons/Episodes Page with Episode Description]
-  (./wireframe/5-Buffy-Seasons-Pg-w-Ep-Description.png)
+  ![Image of Main Seasons/Episodes Page](./wireframe/3-Buffy-Seasons-Pg.png)
+  ![Image of Seasons/Episodes Page with Dropdown](./wireframe/4-Buffy-Seasons-Pg-w-Drop-Down.png)
+  ![Image of Seasons/Episodes Page with Episode Description](./wireframe/5-Buffy-Seasons-Pg-w-Ep-Description.png)
 
 * *Cast Page*
   * Once a cast member is clicked on, a section on the right will show details for that specific cast member
   * Headers, descriptions, images, etc. will change depending on the toggle
-  ![Image of Main Cast Page]
-  (./wireframe/6-Buffy-Cast-Pg.png)
-  ![Image of Cast Page with Member Detail]
-  (./wireframe/7-Buffy-Cast-Pg-w-Mem-Detail.png)
+  ![Image of Main Cast Page](./wireframe/6-Buffy-Cast-Pg.png)
+  ![Image of Cast Page with Member Detail](./wireframe/7-Buffy-Cast-Pg-w-Mem-Detail.png)
 
 ## Mind Map
-![Image of Mindmap]
-(./mindmap/mindmap.png)
+![Image of Mindmap](./mindmap/mindmap.png)

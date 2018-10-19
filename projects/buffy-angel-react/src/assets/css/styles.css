@@ -212,10 +212,12 @@ h4{
 
 .cast-member:hover .cast-member-person{
     color: black;
+    font-weight: bold;
 }
 
 .cast-member:hover .cast-member-character{
     color: darkred;
+    font-weight: bold;
 }
 
 .cast-member-person{
