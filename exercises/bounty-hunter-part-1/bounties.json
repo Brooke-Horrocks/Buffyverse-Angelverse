@@ -1,0 +1,50 @@
+[
+    {
+        "id": "0",
+        "firstName": "Darth",
+        "lastName": "Maul",
+        "living": true,
+        "bountyAmount": 10000,
+        "type": "Sith"
+    },
+    {
+        "id": "",
+        "firstName": "Kylo",
+        "lastName": "Ren",
+        "living": true,
+        "bountyAmount": 1000000000,
+        "type": "Sith"
+    },
+    {
+        "id": "",
+        "firstName": "Tavion",
+        "lastName": "Axmis",
+        "living": true,
+        "bountyAmount": 350,
+        "type": "Sith"
+    },
+    {
+        "id": "",
+        "firstName": "Visas",
+        "lastName": "Marr",
+        "living": true,
+        "bountyAmount": 1000,
+        "type": "Sith"
+    },
+    {
+        "id": "",
+        "firstName": "Darth",
+        "lastName": "Nihilus",
+        "living": true,
+        "bountyAmount": 50000,
+        "type": "Sith"
+    },
+    {
+        "id": "",
+        "firstName": "Count",
+        "lastName": "Dooku",
+        "living": true,
+        "bountyAmount": 900000,
+        "type": "Sith"
+    }
+]
