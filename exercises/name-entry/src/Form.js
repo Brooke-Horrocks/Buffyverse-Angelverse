@@ -32,3 +32,42 @@ class Form extends Component{
 }
 
 export default Form;
+
+// import React from 'react';
+
+// const GameControls = ({_initializeGameCanvas, _handleChange, _handleSelectChange, maxScore, initialVelocity, p1Paddle, p2Paddle, ball}) => {
+
+//     return (
+//         <article>
+//           <form>
+//             <label>
+//               Max Score: 
+//               <input name="maxScore" value={maxScore} type="number" onChange={_handleChange}></input>
+//             </label>
+//             <label>
+//               Initial Velocity:
+//               <select name="initialVelocity" value={initialVelocity} onChange={_handleSelectChange}>
+//                 <option value="1">1</option>
+//                 <option value="2">2</option>
+//                 <option value="3">3</option>
+//               </select>
+//             </label>
+//             <label>
+//               P1 Paddle: 
+//               <input name="p1Paddle" value={p1Paddle} type="color" onChange={_handleChange}></input>
+//             </label>
+//             <label>
+//               P2 Paddle: 
+//               <input name="p2Paddle" value={p2Paddle} type="color" onChange={_handleChange}></input>
+//             </label>
+//             <label>
+//               Ball: 
+//               <input name="ball" value={ball} type="color" onChange={_handleChange}></input>
+//             </label>
+//           <button onClick={_initializeGameCanvas}></button>
+//           </form>
+//         </article>
+//     )
+// }
+
+// export default GameControls;
