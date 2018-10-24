@@ -27,29 +27,29 @@ itemRouter.route("/")
     })
 
 itemRouter.route("/:id")
-    .get((req, res) => {
+    .get((req, res, next) => {
         Item.findById(req.params.id, (err, foundItem) => {
             if(err){
                 res.status(400)
-                throw new Error("There is a problem with the database");
+                next(err)
             }
             res.status(200).send(foundItem)
         })
     })
-    .delete((req, res) => {
+    .delete((req, res, next) => {
         Item.findByIdAndDelete(req.params.id, (err) => {
             if(err){
                 res.status(400)
-                throw new Error("There is a problem with the database");
+                next(err)
             }
             res.status(204).send();
         })
     })
-    .put((req, res) => {
+    .put((req, res, next) => {
         Item.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedItem) => {
             if(err){
                 res.status(400);
-                throw new Error("There is a problem with the database");
+                next(err)
             }
             res.status(200).send(updatedItem);
         })
