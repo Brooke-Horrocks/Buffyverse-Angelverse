@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+h2{
+    text-align: center;
+    padding-right: 2%;
+    margin: 0;
+    width: 50%;
+}
+
+h3{
+    margin: 2%;
+}
+
+h4{
+    margin: 1%;
+}
+
+p{
+    margin: 1%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.navbar{
+    margin-bottom: 2%;
+}
+
+.link{
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease;
+}
+
+.link:hover{
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.main-container{
+    padding: 2%;
+    margin-top: 85px;
+    margin-bottom: 5%;
+}
+
+.home-paragraph{
+    text-align: center;
+}
+
+.page-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75px;
+}
+
+.my-books-container{
+    height: 100%;
+}
+
+.book-view-container{
+    border: 2px solid black;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.book-view-header-container{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-title{
+    width: 80%;
+}
+
+.book-title:hover{
+    cursor: pointer;
+}
+
+.icon-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hidden{
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.book-view-body-container{
+    height: 250px;
+    overflow: scroll;
+    transition: all .5s ease;
+}
+
+.form{
+    height: auto;
+    width: 96%;
+    transition: all .5s ease;
+    position: absolute;
+    z-index: 1000;
+    border: 2px solid darkgray;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #383838;
+    padding: 2%;
+    background-color: #fff;
+}
+
+fieldset{
+    border-radius: 8px;
+    border: 2px solid #383838;
+}
+
+
+label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.radio-label{
+    justify-content: flex-start;
+}
+
+.book-info-input{
+    width: 80%;
+}
+
+.book-extra-input{
+    width: 68%;
+}
+
+.footer-container{
+    width: 100%;
+    padding: 2%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #383838;
+    color: #F5F5F5;
+}
