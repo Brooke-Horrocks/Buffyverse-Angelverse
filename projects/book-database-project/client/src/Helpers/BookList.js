@@ -9,7 +9,7 @@ import Loading from './Loading';
 import ErrorHandling from './ErrorHandling';
 import BookView from './BookView';
 
-function BookList({ books, loading, err, location }) {
+function BookList({ books, loading, err, location, handleDeleteBook }) {
     // Function to filter by bookCollection 'owned'
     const filterBookCollection = (bookCollection) => {
         return books => books.filter(book => book.bookCollection === bookCollection)
@@ -20,7 +20,7 @@ function BookList({ books, loading, err, location }) {
 
     // Map through list of filtered books to create elements of bookViews for each one
     const bookElements = filteredByCollection.map(book => (
-        <BookView key={book._id} book={book} />
+        <BookView key={book._id} book={book} handleDeleteBook={handleDeleteBook}/>
     ))
 
     return (

@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button"
 import DeleteIcon from "@material-ui/icons/DeleteRounded";
 import EditIcon from "@material-ui/icons/Edit";
 
-function BookView({ book, on, toggle }) {
+function BookView({ book, on, toggle, handleDeleteBook }) {
     return (
         <div className="book-view-container">
             <div className="book-view-header-container">
@@ -15,7 +15,7 @@ function BookView({ book, on, toggle }) {
                     <Button>
                         <EditIcon />
                     </Button>
-                    <Button>
+                    <Button onClick={handleDeleteBook(book._id)}>
                         <DeleteIcon />
                     </Button>
                 </div>
