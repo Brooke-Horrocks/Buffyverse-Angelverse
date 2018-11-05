@@ -6,8 +6,8 @@ import HeaderContainer from "./Header/HeaderContainer";
 import MainContainer from './Main/MainContainer';
 import FooterContainer from "./Footer/FooterContainer";
 
-function App(){
-    return(
+function App() {
+    return (
         <div>
             <HeaderContainer />
             <MainContainer />

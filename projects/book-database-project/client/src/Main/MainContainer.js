@@ -5,6 +5,7 @@ import Home from "./Home/Home";
 import MyBooks from "./MyBooks/MyBooks";
 import Wishlist from "./Wishlist/Wishlist";
 import Recommendations from "./Recommendations/Recommendations";
+import Add from "./Add/Add";
 
 function MainContainer() {
     return (
@@ -14,6 +15,7 @@ function MainContainer() {
                 <Route path="/owned" component={MyBooks}/>
                 <Route path="/wishlist" component={Wishlist}/>
                 <Route path="/recommendations" component={Recommendations}/>
+                <Route path="/add-a-book" component={Add}/>
             </Switch>
         </div>
     )

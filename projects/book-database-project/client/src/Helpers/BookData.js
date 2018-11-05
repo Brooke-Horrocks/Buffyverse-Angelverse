@@ -1,4 +1,4 @@
-//TODO: Figure out how to make page refresh after deleting or adding, etc. 
+//TODO: Figure out how to make page refresh after adding, etc. //TODO: USE PREVSTATE
 
 import React, { Component, createContext } from "react";
 import axios from "axios";
@@ -13,10 +13,11 @@ export default class BookData extends Component {
         this.state = {
             loading: true,
             err: null,
-            currentGenre: null, //FIXME: Maybe instead of this use withRouter for the same thing?
             books: []
         }
-        this._handleDeleteBook = this._handleDeleteBook.bind(this);
+        this.handleDeleteBook = this.handleDeleteBook.bind(this);
+        this.handlePostBook = this.handlePostBook.bind(this);
+        this.handlePutBook = this.handlePutBook.bind(this);
     }
 
     _getBookData(url) {
@@ -30,14 +31,41 @@ export default class BookData extends Component {
                 ]
             ))
     }
-    _handleDeleteBook(id) {
-        return e => axios.delete(`${booksUrl}/${id}`)
+
+    // Post to the database
+    handlePostBook(book) {
+        return e => {
+            axios.post(booksUrl, book)
+                .then(response => {
+                    this.setState(prevState => ({
+                        books: [...prevState.books, book]
+                    }))
+                })
+                .catch(err => this.setState({ err }))
+        }
+    }
+    handlePutBook(id, editedBook){
+        return e => {
+            axios.put(`${booksUrl}/${id}`, editedBook)
+                .then(response => {
+                    this.setState(prevState => ({
+                        books: [...prevState.books.map(book => book._id === id ? response.data : book)]
+                    }))
+                })
+                .catch(err => this.setState({ err }))
+        }
+    }
+    // Delete book from database
+    handleDeleteBook(id) {
+        return e => {
+            axios.delete(`${booksUrl}/${id}`)
             .then(response => {
-                console.log(response)
+                this.setState(prevState => ({
+                    books: prevState.books.filter(book => book._id !== id)
+                }))
             })
-            .catch(err => {
-                console.log(err)
-            })
+            .catch(err => console.log(err))
+        }
     }
 
     componentDidMount() {
@@ -47,24 +75,18 @@ export default class BookData extends Component {
                 err: null,
                 books
             }))
-            .catch(err => this.setState({
-                err
-            }))
-    }
-    componentDidUpdate(prevState) {
-        if (this.state !== prevState) {
-            //Is this the best way to re-render once book has been added?
-        }
+            .catch(err => this.setState({ err }))
     }
 
     render() {
         const props = {
-            handleDeleteBook: this._handleDeleteBook,
+            handlePostBook: this.handlePostBook,
+            handleDeleteBook: this.handleDeleteBook,
+            handlePutBook: this.handlePutBook,
             ...this.state
         }
-
         return (
-            <BookContext.Provider value={props}>
+            <BookContext.Provider value={props} >
                 {this.props.children}
             </BookContext.Provider>
         )

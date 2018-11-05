@@ -1,30 +1,38 @@
 import React from "react";
 import { withToggler } from 'atom-lib';
-
-import Button from "@material-ui/core/Button";
-import AddIcon from "@material-ui/icons/AddCircleOutline";
+import { withBookContext } from "../../Helpers/BookData";
 
 import BookList from "../../Helpers/BookList";
-import Form from "../../Helpers/Form";
+import FormContainer from "../../Forms/FormContainer";
+import AddForm from "../../Forms/AddForm";
 
-
-function MyBooks({ toggle, on }) {
+function MyBooks({ toggle, on, handlePostBook }) {
     return (
         //Figure out left sidebar and filtering by genre later
         <div className="my-books-container">
             <div className="page-header">
                 <h2>My Books</h2>
-                <Button onClick={toggle}>
-                    <AddIcon />
-                </Button>
             </div>
             <div className={on ? "form" : "hidden"}>
-                <Form toggle={toggle} />
+                <FormContainer inputs={{
+                    title: "",
+                    author: "",
+                    genre: "",
+                    bookCollection: "",
+                    synopsis: "",
+                    thoughts: "",
+                    price: "",
+                    recommendedBy: ""
+                }} >
+                    {props => (
+                        <AddForm {...props} handleSubmit={handlePostBook} toggle={toggle}/>
+                    )}
+                </FormContainer>
             </div>
             <BookList />
         </div>
-        
+
     )
 }
 
-export default withToggler({ on: false })(MyBooks);
+export default withToggler({ on: false })(withBookContext(MyBooks));
