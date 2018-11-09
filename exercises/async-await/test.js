@@ -22,8 +22,6 @@ const getPersonalData = user => {
     });
 };
 
-const handleData = list => console.log(list);
-
 // Keyword async turns it into a function that returns a promise
 const getAllPersonalData = async () => {
     const userResponse = await getUser();
