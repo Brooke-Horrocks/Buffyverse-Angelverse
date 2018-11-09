@@ -6,4 +6,4 @@ function subscribeToTimer(cb) {
     socket.emit('subscribeToTimer', 1000);
 }
 
-export { subscribeToTimer }
+export { subscribeToTimer };
