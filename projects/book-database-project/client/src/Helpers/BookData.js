@@ -1,5 +1,3 @@
-//TODO: Figure out how to make page refresh after adding, etc. //TODO: USE PREVSTATE
-
 import React, { Component, createContext } from "react";
 import axios from "axios";
 

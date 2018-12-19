@@ -1,6 +1,5 @@
-// IN BOOK DATA MAYBE HAVE CURRENTGENRE AND CURRENTCOLLECTION SO INSTEAD OF A STRING LITERAL IT CAN BE AN OBJECT FROM STATE
-
 import React from "react";
+
 import { withRouter } from "react-router-dom";
 import { withBookContext } from './BookData';
 

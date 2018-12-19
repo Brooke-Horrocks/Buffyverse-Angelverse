@@ -1,6 +1,6 @@
 import React from "react";
-import { withToggler, Toggler } from "atom-lib";
 
+import { withToggler, Toggler } from "atom-lib";
 import Toggling from "./Toggling";
 
 import Divider from "@material-ui/core/Divider"
@@ -32,47 +32,3 @@ function BookView({ book, on, toggle, handleDeleteBook, handlePutBook }) {
 }
 
 export default withToggler({ on: false })(BookView); 
-
-{/* <FormContainer inputs={book}>
-                    {({ handleChange, inputs }) => (
-                        <Toggler>
-                            {({ on, toggle }) => (
-                                <Fragment>
-                                    <Button onClick={toggle}>
-                                        <EditIcon />
-                                        Edit Book
-                                    </Button>
-                                    <form action="" onSubmit={handlePutBook(book._id, inputs)}>
-                                        <h4>Author:</h4>
-                                        {
-                                            on ?
-                                                <input name="author" onChange={handleChange} type="text" value={inputs.author} />
-                                                :
-                                                <p onClick={toggle}>{book.author}</p>
-                                        }
-                                        <h4>Price:</h4>
-                                        {
-                                            on ?
-                                                <input name="price" onChange={handleChange} type="text" value={inputs.price} />
-                                                :
-                                                <p onClick={toggle}>{book.price}</p>
-                                        }
-                                        <button onClick={toggle}>Edit</button>
-                                    </form>
-                                </Fragment>
-                            )}
-                        </Toggler>
-                    )}
-                </FormContainer>
-                <h4>Author:</h4>
-                <p>{book.author}</p>
-                <h4>Genre:</h4>
-                <p>{book.genre}</p>
-                <h4>Synopsis:</h4>
-                <p>{book.synopsis}</p>
-                <h4>Thoughts:</h4>
-                <p>{book.thoughts}</p>
-                <h4>Price:</h4>
-                <p>{book.price}</p>
-                <h4>Recommended By:</h4>
-                <p>{book.recommendedBy}</p> */}

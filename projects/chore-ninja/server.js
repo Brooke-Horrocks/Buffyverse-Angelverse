@@ -8,6 +8,7 @@ const PORT = process.env.PORT;
 
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use("/api", expressJwt({ secret: process.env.SECRET }));
 
 mongoose.set("useCreateIndex", true);
@@ -20,7 +21,7 @@ app.use("/api/rewards", require("./routes/reward"));
 // General error catching
 app.use((err, req, res, next) => {
     console.log(err);
-    if(err.name === "UnauthorizedError") {
+    if (err.name === "UnauthorizedError") {
         res.status(err.status)
     }
     return res.send({ message: err.message });

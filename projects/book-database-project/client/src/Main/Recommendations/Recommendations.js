@@ -8,7 +8,6 @@ import AddForm from "../../Forms/AddForm";
 
 function Recommendations({ toggle, on, handlePostBook }) {
     return (
-        //Figure out left sidebar and filtering by genre later
         <div className="my-books-container">
             <div className="page-header">
                 <h2>Recommendations</h2>

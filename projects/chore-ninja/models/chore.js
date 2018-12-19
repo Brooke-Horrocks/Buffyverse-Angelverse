@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-
 const choreSchema = new Schema({
     category: {
         type: String,
@@ -12,7 +11,13 @@ const choreSchema = new Schema({
         type: String, 
         required: true
     },
-    startedAt: Date,
+    description: {
+        type: String,
+    },
+    timeElapsed: {
+        type: Number,
+        default: 0
+    },
     completed: {
         type: Boolean,
         default: false
@@ -22,7 +27,6 @@ const choreSchema = new Schema({
         ref: "User",
         required: true
     },
-    submittedAt: Date,
     submitted: {
         type: Boolean,
         default: false
@@ -36,6 +40,9 @@ const choreSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User",
         required: true
+    },
+    image: {
+        filename: String,
     }
 });
 
